@@ -1,0 +1,264 @@
+/* transition mixin */
+#content-holder {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  padding-left: 4px;
+  position: relative;
+}
+#content-holder #conHeader {
+  padding: 12px 20px 3px 0;
+}
+#content-holder #conHeader .title {
+  font-size: 24px;
+}
+#content-holder #conHeader .continueBtn {
+  position: relative;
+}
+#content-holder #conHeader .continueBtn button,
+#content-holder #conHeader .continueBtn a {
+  width: 103px;
+  height: 40px;
+  font-size: 12px;
+  font-family: "aileronbold";
+  color: #fff;
+  border: 0;
+  border-radius: 0;
+  text-transform: uppercase;
+  background: #2d76fc;
+  margin-top: 2px;
+}
+#content-holder #conHeader .continueBtn button.btn-disabled,
+#content-holder #conHeader .continueBtn a.btn-disabled {
+  background: #dddddd;
+}
+#content-holder #conHeader .continueBtn i {
+  vertical-align: middle;
+  background-position: -108px -45px;
+  width: 20px;
+  height: 16px;
+}
+#content-holder #conHeader .continueBtn .warning-message {
+  width: 180px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  top: 35px;
+  left: -137px;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+}
+#content-holder #conHeader .continueBtn .warning-message:before {
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: -5px;
+  right: 27px;
+}
+#content-holder #conHeader .continueBtn .icon-warning:hover ~ .warning-message {
+  visibility: visible;
+  opacity: 1;
+}
+#content-holder #uploadField .stepHolder {
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+#content-holder #uploadField .stepHolder.step2 {
+  position: relative;
+}
+#content-holder #uploadField .stepHolder .step-label {
+  font-size: 11px;
+  font-family: "aileronbold";
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  padding-right: 12px;
+  margin-bottom: 3px;
+}
+#content-holder #uploadField .stepHolder .step-label:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #ee383d;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -6px;
+}
+#content-holder #uploadField .stepHolder .step-label.good:before {
+  background: #2ecc71;
+}
+#content-holder #uploadField .stepHolder .step-label.processing:before {
+  background: #2d76fc;
+}
+#content-holder #uploadField .stepHolder .step-label.warning:before {
+  background: #f9903a;
+}
+#content-holder #uploadField .stepHolder .uploadCount {
+  float: right;
+  font-size: 10px;
+  position: relative;
+  bottom: -4px;
+  color: #aaa;
+}
+#content-holder #uploadField .stepHolder .faileduploadCount {
+  display: inline-block;
+  font-size: 10px;
+  color: #aaa;
+  margin-left: 10px;
+}
+#content-holder #uploadField .assets-parent {
+  background: #fff;
+  border: 1px solid #dddddd;
+  padding: 4px 13px 5px 13px;
+  margin: 0;
+  list-style: none;
+  height: 36px;
+}
+#content-holder #uploadField .assets-parent > li {
+  display: inline-block;
+  font-size: 12px;
+  color: #aaa;
+  width: 85px;
+  position: relative;
+}
+#content-holder #uploadField .assets-parent > li:nth-child(4), #content-holder #uploadField .assets-parent > li:nth-child(5) {
+  width: 115px;
+}
+#content-holder #uploadField .assets-parent > li:nth-child(6) {
+  width: auto;
+}
+#content-holder #uploadField .assets-parent > li label {
+  font-weight: normal;
+  position: relative;
+  top: -3px;
+}
+#content-holder .file-item-con {
+  text-align: left;
+  padding: 10px 0;
+  height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#content-holder .file-item-con .file-item {
+  display: block;
+  height: 25px;
+}
+#content-holder .file-item-con .file-item .left {
+  width: 50%;
+  float: left;
+}
+#content-holder .file-item-con .file-item .left > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#content-holder .file-item-con .file-item .left .numCount {
+  font-size: 10px;
+  color: #aaa;
+  padding: 0 15px;
+}
+#content-holder .file-item-con .file-item .left .filename {
+  font-size: 12px;
+  font-weight: normal;
+}
+#content-holder .file-item-con .file-item .right {
+  text-align: right;
+  width: 50%;
+  float: right;
+}
+#content-holder .file-item-con .file-item .right > div {
+  display: inline-block;
+}
+#content-holder .file-item-con .file-item .right .preview {
+  margin-right: 10px;
+}
+#content-holder .file-item-con .file-item .right .preview img {
+  width: 100%;
+  height: auto;
+  max-width: 15px;
+  vertical-align: middle;
+}
+#content-holder .file-item-con .file-item .right .indicator a i {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+#content-holder .file-item-con .file-item .right .indicator a.approved:hover i {
+  background-position: -110.5px -62px;
+}
+#content-holder .file-item-con .file-item .right .indicator a.failed:hover i {
+  background-position: -150px -46px;
+}
+#content-holder .file-item-con .file-item .right .indicator .loader {
+  width: 100%;
+  height: auto;
+  max-width: 15px;
+  margin-right: 15px;
+}
+#content-holder .file-item-con .file-item:hover {
+  background: #f1f1f1;
+}
+#content-holder .on-drag-pop {
+  width: 185px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  margin-left: -92.5px;
+  visibility: hidden;
+  opacity: 0;
+}
+#content-holder .on-drag-pop .box {
+  background: #2d76fc;
+  color: #fff;
+  font-size: 11px;
+  height: 35px;
+  line-height: 35px;
+  box-shadow: 0 0 10px #aaa;
+}
+#content-holder #dropzone {
+  background: #fff;
+  width: 100%;
+  height: 350px;
+  border-radius: 4px;
+  border: 1px dashed #d1d1d1;
+  position: relative;
+}
+#content-holder #dropzone input[type="file"] {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#content-holder #dropzone label {
+  text-align: center;
+  display: block;
+}
+#content-holder #dropzone .defCont {
+  height: 350px;
+  font-size: 12px;
+  color: #202020;
+  font-weight: normal;
+}
+#content-holder #dropzone .defCont i {
+  margin-right: 10px;
+  width: 23px;
+  height: 28px;
+}
+#content-holder #dropzone.is-dragover {
+  border-color: #2d76fc;
+}
+#content-holder #dropzone.is-dragover ~ .on-drag-pop {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=upload-style.css.map */

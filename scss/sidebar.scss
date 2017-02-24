@@ -1,0 +1,319 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+/*Sidebar*/
+/*----------------------------------------------------------------------------*/
+.sb-logo {
+    height: 60px;
+    padding-left: 10px; // change 2/10/2017
+    .logo-img {
+        height: 30px;
+        width:  163px;
+        
+        img  {
+            height: $full-height;
+            width: $full-width;
+        }
+    }
+}
+
+.sidebar .nav {
+    li {
+        position: relative;
+        flex-wrap: wrap;
+        +li { margin-top: 0; }
+        span > span,
+        span > span:before{
+            color: $dgray-3;
+            font-size: 13px;
+        }
+        img{
+            @include half-width(32);
+            height: auto;
+            vertical-align: middle;
+            margin-top: -5px;
+        }
+        > .drop{
+            flex: 1;
+            padding: 0;
+            margin-top: 10px;
+            display: none;
+            > li{
+                padding: 10px 0;
+                > p{
+                    position: relative;
+                    &:before{
+                        content: "";
+                        width: 1px;
+                        height: calc(100% + 20px);
+                        background: $lgray-1;
+                        position: $absolute;
+                        top: -10px;
+                        left: 30px;
+                    }
+                }
+                input:checked{
+                    ~ .checkbox-grp > label{
+                        &:after {
+                            content: "";
+                            border: 1px solid $white;
+                            height: 9px;
+                            width: 5px;
+                            position: $absolute;
+                            right: 0;
+                            top: 14px;
+                            transform: rotate(45deg);
+                            border-left: 0;
+                            border-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+        input {
+            border: 0 $none;
+            border-radius: 0;
+            box-shadow: none;
+            font-family: $light-text;
+            font-size: $font13;
+            height: 40px;
+            outline: $none;
+
+            &:focus { box-shadow: $none; }
+            &:checked{
+                ~ .checkbox-grp > label {
+                    &:before{
+                        background-color: $blue-1;
+                        border-color: $blue-1;
+                    }
+                    &:after {
+                        content: "";
+                        border: 1px solid $white;
+                        height: 9px;
+                        width: 5px;
+                        position: $absolute;
+                        right: 15px;
+                        top: 14px;
+                        transform: rotate(45deg);
+                        border-left: 0;
+                        border-top: 0;
+                    }
+                }
+                ~ .drop{
+                    display: block;
+                }
+                ~ .has-more{
+                    span > span:before{
+                        content: "";
+                        @include background-position (276,20);
+                    }
+                    + .checkbox-grp > label:after{
+                        height: 1px;
+                        width: 9px;
+                        border: none;
+                        background: $white;
+                        transform: none;
+                        right: 12.50px;
+                        top: 18.5px;
+                    }
+                }
+            }
+        }
+        
+        p.has-more{
+            span > span{
+                display: inline-block; 
+                &:before{
+                    content: "";
+                    background-image: $sprite-background;
+                    background-repeat: no-repeat;
+                    background-size: $sprite-bg-size;
+                    @include half-width-height(13,13);
+                    @include background-position (276,0);
+                    display: block;
+                    vertical-align: middle;
+                    position: relative;
+                    top: -0.5px;
+                }    
+            }
+        }
+        
+    }
+    
+    a, .sb-admin li {
+        border-radius: 0;
+        color: #202020;
+        font-size: 15px;
+        
+        &:hover, &:focus { background-color: $transparent; }
+        
+        &:hover:before, &.active:before {
+            background-color: $blue-1;
+            content: "";
+            height: $full-height;
+            left: 0;
+            position: $absolute;
+            top: 0;
+            width: 3px;
+        }
+        
+        &.selected {
+            background-color: $blue-1;
+            color: $white;
+        }
+    }
+    .sb-admin ul > li a{
+        display: block;
+    }
+    .sb-admin li:hover,
+    .sb-admin li.active{
+        background: $lgray-2;
+        cursor: pointer;
+    }
+    
+    .sb-menu-abbr {
+        display: $inline-b;
+        font-size: 16px;
+        margin-right: 10px;
+        text-align: $center;
+        width: 25px;
+    }
+    
+    .inner-list { display: $none; }
+} 
+
+
+.sidebar .inner-list {
+    max-height: 260px;
+    overflow: auto;
+    position: relative;
+    li {
+        display: flex;
+        padding: 10px 15px;
+
+        p { 
+            font-size: 13px;
+
+            .icon { font-size: 20px; vertical-align: middle; }
+        }
+    }
+}
+
+.sidebar .inner-list .checkbox-grp { 
+    label {
+        &:before {
+            top: 12px;
+        }
+    }
+}
+
+.sidebar .sb-smart-grp .checkbox-grp { 
+    margin-right: 15px;
+    
+    label {
+        &:before { right: 10px; }
+    }
+}
+
+.search-grp {  
+    width: $full-width;
+    position: relative;
+    z-index: -1;
+    input {
+        border: 0 $none;
+        border-radius: 0;
+        box-shadow: none;
+        font-family: $light-text;
+        font-size: $font13;
+        height: 40px;
+        outline: $none;
+        
+        &:focus { box-shadow: $none; }
+    }
+    
+    .input-group-addon {
+        background-color: $transparent;
+        border: 0 $none;
+        font-size: 20px;
+        padding-right: 0;
+        position: $relative;
+        color: $lgray-3;
+    }
+    
+}
+
+#main_sidebar{
+    > li {
+        > a{
+            position: relative;
+            padding: 9px 10px; //change 2/10/2017
+            &:after{
+                content: "";
+                width: 7px; //change 2/10/2017
+                height: 7px; //change 2/10/2017
+                border-left: 1px solid $black;
+                border-bottom: 1px solid $black;
+                position: absolute;
+                top: 15.5px; //change 2/10/2017
+                right: 13px; //change 2/10/2017
+                transform: rotate(-48deg);
+            }
+            &.active{
+                &:after{
+                    border-color: $white;
+                    transform: rotate(136deg);
+                    top: 18px; //change 2/10/2017
+                }
+            }
+        }
+    }
+}
+
+.sb-smart-grp{
+    .inner-list{
+        li{
+            p{
+                -webkit-flex: 2 0 0;
+                flex: 2 0 0;
+                a{
+                    display: block;
+                }
+            }
+        }
+        .checkbox-grp{
+            label{
+                cursor: pointer;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.sb-admin{
+    .inner-list{
+        li{
+            height: 45px;
+            padding: 13px 0;
+            a{
+                width: 100%;
+                -ms-box-orient: horizontal;
+                display: -webkit-box !important;      
+                display: -moz-box !important;         
+                display: -ms-flexbox !important;
+                display: -moz-flex !important;
+                display: -webkit-flex;    
+                display: flex;
+                padding: 0 15px;
+            }
+        }
+        .checkbox-grp{
+            label{
+                cursor: pointer;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/*-------------------------------end of Sidebar-------------------------------*/

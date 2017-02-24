@@ -1,0 +1,80 @@
+//background-postion for sprite icon
+@mixin background-position ($x,$y){
+    background-position: (-$x / 2 * 1px) (-$y / 2 * 1px);
+}
+
+@mixin half-width-height($x,$y){
+    width: ($x / 2 * 1px);
+    height: ($y / 2 * 1px);
+}
+
+@mixin half-width($x){
+    width: ($x / 2 * 1px);
+}
+
+@mixin em($fontsize,$default){
+    font-size: ( $fontsize / $default * 1em );
+}
+
+/* transition mixin */
+@mixin transition($transition) {
+    @include vendor-prefixes(transition, $transition);
+}
+
+@mixin transition-property($property) {
+    @include vendor-prefixes(transition-property, $property);
+}
+
+@mixin transition-duration($duration) {
+    @include vendor-prefixes(transition-property, $duration);
+}
+
+@mixin transition-timing-function($timing) {
+    @include vendor-prefixes(transition-timing-function, $timing);
+}
+
+@mixin transition-delay($delay) {
+    @include vendor-prefixes(transition-delay, $delay);
+}
+
+
+// generic transform
+@mixin transform($transforms) {
+    @include vendor-prefixes(transform, $transforms);
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    @include vendor-prefixes(transform-origin, $origin);
+}
+
+@mixin vendor-prefixes($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+    #{$property}: $value;
+}
+
+//box-shadow
+@mixin box-shadow($val) {
+    -webkit-box-shadow: $val;
+    -moz-box-shadow: $val;
+    box-shadow: $val;
+}

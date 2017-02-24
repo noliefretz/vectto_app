@@ -1,0 +1,476 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+@font-face {
+    font-family: 'aileronbold';
+    src: url('../fonts/aileron/aileron-bold.eot');
+    src: url('../fonts/aileron/aileron-bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/aileron/aileron-bold.woff2') format('woff2'),
+        url('../fonts/aileron/aileron-bold.woff') format('woff'),
+        url('../fonts/aileron/aileron-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileronlight';
+    src: url('../fonts/aileron/aileron-light.eot');
+    src: url('../fonts/aileron/aileron-light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/aileron/aileron-light.woff2') format('woff2'),
+        url('../fonts/aileron/aileron-light.woff') format('woff'),
+        url('../fonts/aileron/aileron-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aileronsemibold';
+    src: url('../fonts/aileron/aileron-semibold.eot');
+    src: url('../fonts/aileron/aileron-semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/aileron/aileron-semibold.woff2') format('woff2'),
+        url('../fonts/aileron/aileron-semibold.woff') format('woff'),
+        url('../fonts/aileron/aileron-semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aileronthin';
+    src: url('../fonts/aileron/aileron-thin.eot');
+    src: url('../fonts/aileron/aileron-thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/aileron/aileron-thin.woff2') format('woff2'),
+        url('../fonts/aileron/aileron-thin.woff') format('woff'),
+        url('../fonts/aileron/aileron-thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aileronregular';
+    src: url('../fonts/aileron/aileron-regular.eot');
+    src: url('../fonts/aileron/aileron-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/aileron/aileron-regular.woff2') format('woff2'),
+        url('../fonts/aileron/aileron-regular.woff') format('woff'),
+        url('../fonts/aileron/aileron-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { font-family: $light-text; }
+
+/*Headings*/
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+input, input:focus,
+button,
+button:hover,
+button:active{
+    @include vendor-prefixes(box-shadow, none !important);
+    outline: 0 !important;
+}
+
+/*Paragraph*/
+.f11 { font-size: $font11; }
+.f12 { font-size: $font12; }
+.f13 { font-size: $font13; }
+.f15 { font-size: $font15; }
+
+a, a:hover { text-decoration: $none !important; }
+
+/*Font Weight*/
+strong, .t-bold  { font-family: $bold-text; }
+b, .t-semibold { font-family: $semi-b-text; }
+.t-regular{ font-family: $regular-text; }
+.t-light    { font-family: $light-text; }
+.t-thin     { font-family: $thin-text; }
+
+/*Font Color*/
+.t-black  { color: $black; }
+.t-white  { color: $white; }
+.t-dgray1 { color: $dgray-1; }
+.t-blue1  { color: $blue-1; }
+.t-orange1{ color: $orange-1; }
+
+/*Background Color*/
+.bg-black  { background-color: $black; }
+.bg-white  { background-color: $white; }
+.bg-dgray1 { background-color: $dgray-1; }
+.bg-blue1  { background-color: $blue-1; }
+
+/*Input Placeholder*/
+input::-webkit-input-placeholder {
+    color: $lgray-3;
+    font-family: $light-text;
+}
+
+input:-moz-placeholder { 
+    color: $lgray-3;
+    font-family: $light-text;
+}
+
+input::-moz-placeholder {  
+    color: $lgray-3;
+    font-family: $light-text;
+}
+
+input:-ms-input-placeholder {  
+    color: $lgray-3;
+    font-family: $light-text;
+}
+
+/*Checkbox*/
+.checkbox-grp { 
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.checkbox-grp input { display: $none; }
+
+.checkbox-grp label { 
+    font-size: 13px;
+    font-family: $light-text;
+    font-weight: normal;
+}
+
+.checkbox-grp label:before {
+    border: 1px solid #ddd;
+    border-radius: 100px;
+    content: "";
+    cursor: pointer;
+    position: $absolute;
+    height: 16px;
+    width: 16px;
+} 
+
+.checkbox-grp label:hover:before { background-color: #ececec; }
+
+.checkbox-grp input:checked + label:before {
+    background-color: $blue-1;
+    border-color: $blue-1;
+}
+
+
+
+/*Utilities*/
+.full-width { width: $full-width; }
+.full-height { height: $full-height; }
+
+/*Margins*/
+.no-margin        { margin: 0; }
+.no-margin-top    { margin-top: 0; }
+.no-margin-bottom { margin-bottom: 0; }
+.no-margin-left   { margin-left: 0; }
+.no-margin-right  { margin-right: 0; }
+
+.half-margin-top { margin-top: 5px; }
+.margin-top-1    { margin-top: 10px; }
+.margin-top-15   { margin-top: 15px; }
+.margin-top-2    { margin-top: 20px; }
+.margin-top-25   { margin-top: 25px; }
+.margin-top-3    { margin-top: 30px; }
+.margin-top-35   { margin-top: 35px; }
+.margin-top-4    { margin-top: 40px; }
+.margin-top-45   { margin-top: 45px; }
+.margin-top-5    { margin-top: 50px; }
+.margin-top-55   { margin-top: 55px; }
+
+.half-margin-bottom { margin-bottom:  5px; }
+.margin-bottom-1    { margin-bottom: 10px; }
+.margin-bottom-15   { margin-bottom: 15px; }
+.margin-bottom-2    { margin-bottom: 20px; }
+.margin-bottom-25   { margin-bottom: 25px; }
+.margin-bottom-3    { margin-bottom: 30px; }
+.margin-bottom-35   { margin-bottom: 35px; }
+.margin-bottom-4    { margin-bottom: 40px; }
+.margin-bottom-45   { margin-bottom: 45px; }
+.margin-bottom-5    { margin-bottom: 50px; }
+.margin-bottom-55   { margin-bottom: 55px; }
+
+.half-margin-left { margin-left: 5px; }
+.margin-left-1    { margin-left: 10px; }
+.margin-left-15   { margin-left: 15px; }
+.margin-left-2    { margin-left: 20px; }
+.margin-left-25   { margin-left: 25px; }
+.margin-left-3    { margin-left: 30px; }
+.margin-left-35   { margin-left: 35px; }
+.margin-left-4    { margin-left: 40px; }
+.margin-left-45   { margin-left: 45px; }
+.margin-left-5    { margin-left: 50px; }
+.margin-left-55   { margin-left: 55px; }
+.half-margin-left { margin-left: 5px; }
+
+.half-margin-right { margin-right: 5px; }
+.margin-right-1    { margin-right: 10px; }
+.margin-right-15   { margin-right: 15px; }
+.margin-right-2    { margin-right: 20px; }
+.margin-right-25   { margin-right: 25px; }
+.margin-right-3    { margin-right: 30px; }
+.margin-right-35   { margin-right: 35px; }
+.margin-right-4    { margin-right: 40px; }
+.margin-right-45   { margin-right: 45px; }
+.margin-right-5    { margin-right: 50px; }
+.margin-right-55   { margin-right: 55px; }
+
+
+/*Paddings*/
+.no-padding    { padding: 0; }
+.no-pad-top    { padding-top: 0; }
+.no-pad-bottom { padding-bottom: 0; }
+.no-pad-left   { padding-left: 0; }
+.no-pad-right  { padding-right: 0; }
+
+.half-pad-top { padding-top: 5px; }
+.pad-top-1    { padding-top: 10px; }
+.pad-top-15   { padding-top: 15px; }
+.pad-top-2    { padding-top: 20px; }
+.pad-top-25   { padding-top: 25px; }
+.pad-top-3    { padding-top: 30px; }
+.pad-top-35   { padding-top: 35px; }
+.pad-top-4    { padding-top: 40px; }
+.pad-top-45   { padding-top: 45px; }
+.pad-top-5    { padding-top: 50px; }
+.pad-top-55   { padding-top: 55px; }
+
+.half-pad-bottom { padding-bottom:  5px; }
+.pad-bottom-1    { padding-bottom: 10px; }
+.pad-bottom-15   { padding-bottom: 15px; }
+.pad-bottom-2    { padding-bottom: 20px; }
+.pad-bottom-25   { padding-bottom: 25px; }
+.pad-bottom-3    { padding-bottom: 30px; }
+.pad-bottom-35   { padding-bottom: 35px; }
+.pad-bottom-4    { padding-bottom: 40px; }
+.pad-bottom-45   { padding-bottom: 45px; }
+.pad-bottom-5    { padding-bottom: 50px; }
+.pad-bottom-55   { padding-bottom: 55px; }
+
+.half-pad-left { padding-left: 5px; }
+.pad-left-1    { padding-left: 10px; }
+.pad-left-15   { padding-left: 15px; }
+.pad-left-2    { padding-left: 20px; }
+.pad-left-25   { padding-left: 25px; }
+.pad-left-3    { padding-left: 30px; }
+.pad-left-35   { padding-left: 35px; }
+.pad-left-4    { padding-left: 40px; }
+.pad-left-45   { padding-left: 45px; }
+.pad-left-5    { padding-left: 50px; }
+.pad-left-55   { padding-left: 55px; }
+
+.half-pad-right { padding-right: 5px; }
+.pad-right-1    { padding-right: 10px; }
+.pad-right-15   { padding-right: 15px; }
+.pad-right-2    { padding-right: 20px; }
+.pad-right-25   { padding-right: 25px; }
+.pad-right-3    { padding-right: 30px; }
+.pad-right-35   { padding-right: 35px; }
+.pad-right-4    { padding-right: 40px; }
+.pad-right-45   { padding-right: 45px; }
+.pad-right-5    { padding-right: 50px; }
+.pad-right-55   { padding-right: 55px; }
+
+/*Display*/ 
+.d-block    { display: $block; }
+.d-inline   { display: $inline; }
+.d-inline-b { display: $inline-b; }
+.d-none     { display: $none !important; }
+
+.d-flex { 
+    -ms-box-orient: horizontal;
+    display: -webkit-box;      
+    display: -moz-box;         
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;    
+    display: flex;
+}
+
+/*Flexbox*/
+.flex-vertical-align {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+}
+
+.flex-start { 
+    -webkit-justify-content: flex-start; 
+    justify-content: flex-start; 
+}
+
+.flex-end { 
+    -webkit-justify-content: flex-end; 
+    justify-content: flex-end; 
+}  
+
+.flex-spacebetween { 
+    -webkit-justify-content: space-between; 
+    justify-content: space-between; 
+}
+
+.flex-spacearound { 
+    -webkit-justify-content: space-around; 
+    justify-content: space-around; 
+}  
+
+.flex-center { 
+    -webkit-justify-content: center; 
+    justify-content: center; 
+}
+.flex-direction-row{
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+.flex-justify-content-center{
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+/*Positions*/
+.pos-relative { position: $relative; }
+.pos-absolute { position: $absolute; }
+.pos-static   { position: $static; }
+.pos-fixed    { position: $fixed; }
+
+/*Borders*/
+.no-border        { border: 0 none; }
+.no-border-top    { border-top: 0 none; }
+.no-border-bottom { border-bottom: 0 none; }
+.no-border-left   { border-left: 0 none; }
+.no-border-right  { border-right: 0 none; }
+
+.border-all    { border: 1px solid #ddd; }
+.border-top    { border-top: 1px solid #ddd; }
+.border-bottom { border-bottom: 1px solid #ddd; }
+.border-left   { border-left: 1px solid #ddd; }
+.border-right  { border-right: 1px solid #ddd; }
+
+/*Icons*/
+.xs-icon { font-size: 12px; }
+.sm-icon { font-size: 18px; }
+.md-icon { font-size: 24px; }
+.lg-icon { font-size: 32px; }
+.xl-icon { font-size: 42px; }
+
+.no-before:before{ display: none; }
+.no-after:before{ display: none; }
+
+/*Placeholder*/
+::-webkit-input-placeholder { 
+    font-family: $light-text;
+    color: $lgray-3;
+}
+:-moz-placeholder {  
+    font-family: $light-text;
+    color: $lgray-3;
+}
+::-moz-placeholder {  
+    font-family: $light-text;
+    color: $lgray-3;
+}
+:-ms-input-placeholder {  
+    font-family: $light-text;
+    color: $lgray-3;
+}
+
+/*remove dotted ontline */
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+/*IconSprites*/
+
+.icon-sprite{
+    background-image: $sprite-background;
+    background-repeat: no-repeat;
+    background-size: $sprite-bg-size;
+    display: inline-block;
+}
+
+.icon-filter{
+    @include background-position (160,0);
+    @include half-width-height(41,27);
+}
+
+.icon-stroke{
+    @include background-position (0,0);
+    @include half-width-height(32,33);    
+}
+.icon-solid{
+    @include background-position (50,0);
+    @include half-width-height(32,33);    
+}
+.icon-three-dot{
+    @include background-position (217,0);
+    @include half-width-height(40,9);    
+}
+.icon-fb{
+    @include background-position (350,0);
+    @include half-width-height(22,48);
+}
+.icon-gplus{
+    @include background-position (390,0);
+    @include half-width-height(56,48);       
+}
+.icon-pass-hidden{
+    @include background-position (300,0);
+    @include half-width-height(38,20);       
+}
+.icon-pass-show{
+    @include background-position (300,30);
+    @include half-width-height(38,20);       
+}
+.icon-gear-white{
+    @include background-position (50,90);
+    @include half-width-height(30,30);          
+}
+.icon-power-white{
+    @include background-position (110,83);
+    @include half-width-height(30,36);     
+}
+.icon-edit{
+    @include background-position (0,90);
+    @include half-width-height(18,18);     
+}
+.icon-svg-file{
+    @include background-position (453,35);
+    @include half-width-height(44,54);     
+}
+.icon-circle-close{
+    @include background-position (177,93);
+    @include half-width-height(24,24);     
+}
+.icon-circle-close-red{
+    @include background-position (221,124);
+    @include half-width-height(34,32);     
+}
+.icon-warning{
+    @include background-position (221,90);
+    @include half-width-height(34,32);     
+}
+.icon-cheked{
+    @include background-position (261,90);
+    @include half-width-height(34,32);     
+}
+.icon-retry{
+    @include background-position (300,92);
+    @include half-width-height(34,32);     
+}
+.icon-upload-cloud{
+    @include background-position (407,105);
+    @include half-width-height(78,54);     
+}
+.icon-close-x{
+    @include background-position (0,135);
+    @include half-width-height(24,24);    
+}
+.icon-question-circle{
+    @include background-position (105,141);
+    @include half-width-height(32,32);   
+}
+
+.head-text{
+    font-size: 20px; // change 2/10/2017
+}
+.sub-head-text{
+    font-size: 18px;
+}

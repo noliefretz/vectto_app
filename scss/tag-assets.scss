@@ -1,0 +1,644 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+#tagAssets{
+    
+    .stepHolder{
+        margin-top: 15px;
+    }
+    
+    .vectto-tag-asset{
+        label{
+            position: relative;
+        }
+    }
+    
+    #tagAssetsCon{
+        .assets-parent{
+            padding-left: 45px;
+            position: relative;
+            .checkbox{
+                display: inline-block;
+                position: absolute;
+                top: 7px;
+                left: 10px;
+                margin: 0;
+                > input[type="checkbox"]{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+                > label{
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid #cdcdcd;
+                    border-radius: 50%;
+                    background: #fff;  
+                }
+            }
+            .vectto-tag{
+                width: auto;
+            }
+        }
+        .tag-assets-con{
+            background: #fff;
+            border: 1px solid #ccc;
+            border-top: none; 
+            .file-item-con{
+                padding: 0;
+                .file-item{
+                    height: 50px;
+                    .checkbox{
+                        margin: 0;
+                        margin-left: 10px;
+                        overflow: hidden;
+                        position: relative;
+                        top: 5px;
+                        > label{
+                            width: 14px;
+                            height: 14px;
+                            border: 1px solid #cdcdcd;
+                            border-radius: 50%;
+                            background: #fff;  
+                        }
+                    }
+                    .indicator-count{
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        color: #fff;
+                        font-size: 10px;
+                        line-height: 16px;
+                        text-align: center;
+                        font-family: "aileronlight";
+                        background: #ee383d;
+                        &.success{
+                            background: #2bbb43;
+                        }
+                    }
+                    .left{
+                        .left-wrap{
+                            display: inline-block;
+                            width: 215px;
+                            > div{
+                                float: left;
+                                line-height: 48px;
+                            }
+                        }
+                        .filename{
+                            max-width: 117px;
+                        }
+                    }
+                    .right{
+                        line-height: 48px;
+                        .preview{
+                            max-width: 30px;
+                            width: 100%;
+                            img{
+                                width: 100%;
+                                max-width: 100%;
+                                vertical-align: middle;
+                                margin-top: -7px;
+                            }
+                        }
+                    }
+                    .link-section{
+                        .link-icon{
+                            background-image: url("../images/sprite.png");
+                            background-repeat: no-repeat;
+                            background-size: 250px;
+                            display: inline-block;  
+                            background-position: -23.5px -72px;
+                            width: 15px;
+                            height: 6px;
+                            margin-left: 8px;
+                            &:hover, &.active{
+                                background-position: -23.5px -78.5px;
+                            }
+                        }
+                    }
+                    .tag-section{
+                        position: relative;
+                        > label{
+                            padding-top: 5px;
+                            .label{
+                                position: absolute;
+                                top: 0;
+                                left: -7px;
+                                color: #aaa;
+                                font-size: 12px;
+                                font-weight: normal;
+                                pointer-events: none;
+                                font-family: $light-text;
+                            }
+                            input{
+                                width: auto !important;
+                                border: none;
+                                padding: 0;
+                                color: #202020;
+                                font-size: 12px;
+                                font-weight: normal;
+                                font-family: $light-text;
+                                background: transparent;
+                                &:focus ~ .label{
+                                    display: none;
+                                }
+                            }
+                        }
+                        > .drop{
+                            display: none;
+                            position: absolute;
+                            top: 25px;
+                            left: 0;
+                            width: 180px;
+                            z-index: 2;
+                            ul{
+                                list-style: none;
+                                padding: 0;
+                                height: 150px;
+                                overflow-y: scroll;
+                                background-color: rgba(0, 0, 0, 0.9);
+                                margin: 0;
+                                li{
+                                    position: relative;
+                                    padding: 0 10px;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    > .edit-area{
+                                        > span{
+                                            font-size: 12px;
+                                            color: #fff;
+                                            position: relative;
+                                            display: inline-block;
+                                            .icon-edit{
+                                                visibility: hidden;
+                                                opacity: 0;
+                                                cursor: pointer;
+                                                margin-left: 8px;    
+                                            }
+                                        } 
+                                        > .badge{
+                                            position: absolute;
+                                            top: 6px;
+                                            right: 0;
+                                            background: none;
+                                            font-weight: normal;
+                                            font-size: 10px;
+                                            color: #aaa;
+                                            line-height: 17px;   
+                                        }
+                                    }
+                                    &:hover:not(.editable){
+                                        background: #2c3e50;
+                                        cursor: default;
+                                        &:before{
+                                            content: "";
+                                            width: 3px;
+                                            height: 100%;
+                                            background: #f9903a;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;  
+                                        }
+                                        > .edit-area{
+                                            > span{
+                                                .icon-edit{
+                                                    visibility: visible;
+                                                    opacity: 1;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .addnew{
+                                background: #2d76fc;
+                                visibility: hidden;
+                                opacity: 0;
+                                .input-group{
+                                    > div.form-control{
+                                        background: none;
+                                        border: none;
+                                        font-size: 10px;
+                                        color: #fff;
+                                        padding: 10px 12px;
+                                    }
+                                    .input-group-btn{
+                                        button{
+                                            border: none;
+                                            background: none;
+                                            font-size: 10px;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                                &.show{
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
+                            .editable{
+                                position: relative;
+                                .editold{
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    z-index: 1;
+                                    background: #727272;
+                                    height: 30px;   
+                                }
+                                .input-group{
+                                    input{
+                                        background: none;
+                                        border: none;
+                                        font-size: 12px;
+                                        color: #fff;
+                                        padding: 10px;
+                                        height: 30px; 
+                                    }
+                                    .input-group-btn{
+                                        button{
+                                            border: none;
+                                            background: none;
+                                            font-size: 10px;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                            &.show,&.onfucos{
+                                display: block;
+                            }
+                        }
+                    }                
+                }
+            }
+            .tag-item{
+                line-height: 20px;
+            }
+        }
+    }
+
+    .tag-container {
+        float: left;
+    }
+
+    .tag-item {
+        border: 1px solid #ccc;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        display: block;
+        float: left;
+        padding: 0 5px;
+        text-decoration: none;
+        background: #fff;
+        color: #638421;
+        margin-right: 5px;
+        font-family: "aileronlight";
+        font-size: 12px;
+        position: relative;
+        border-radius: 0;
+        font-weight: normal;
+    }
+    .tag-item.new-tag {
+        background: #fff;
+        color: #202020;
+        border-color: #ccc;
+    }
+    .tag-item.existing-tag {
+        background: #dddddd;
+        color: #202020;
+        border-color: #dddddd;
+    }
+    .tag-item a {
+        font-weight: bold;
+        color: #82ad2b;
+        text-decoration: none;
+        font-size: 11px;
+        background: rgba(222, 75, 75, 0.85);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        display: block;
+        text-align: center;
+    }
+    .tag-item a i {
+        vertical-align: middle;
+    }
+    .tag-item:hover {
+        border-color: #de4b4b;
+    }
+    .tag-item:hover > a {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    //taggle csss
+    
+    .taggle_list {
+        float: left;
+        width: 100%;
+        padding: 0;
+    }
+
+    .taggle_input {
+        border: none;
+        outline: none;
+        font-size: 16px;
+        font-weight: 300;
+        min-width: 100px;
+    }
+
+    .taggle_list li {
+        float: left;
+        display: inline-block;
+        white-space: nowrap;
+        font-weight: 500;
+    }
+
+    .taggle_list .taggle {
+        margin-right: 3px;
+        padding: 0 5px;
+        border-radius: 0;
+        position: relative;
+        cursor: pointer;
+        background: #fff;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        .taggle_text{
+            font-size: 12px;
+            color: #202020;
+            padding: 0;
+            margin: 0;
+            vertical-align: text-top;            
+        }
+        &.new-taggle{
+            background: #2bbb43;
+            border-color: #2bbb43;
+            > .taggle_text{
+                color: #fff;
+            }
+        }
+    }
+
+    .taggle_list .taggle_hot {
+        background: #cac8c4;
+    }
+
+    .taggle_list .taggle .close {
+        font-size: 1.1rem;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        text-decoration: none;
+        padding-left: 2px;
+        padding-top: 3px;
+        line-height: 0.5;
+        color: #fff;
+        padding-bottom: 4px;
+        display: block;
+        border: 0;
+        background: rgba(230, 58, 58, 0.85);
+        cursor: pointer;
+        z-index: 1;
+        font-size: 0;
+        opacity: 0;
+        visibility: hidden;
+        &:after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -(24/4) * 1px;
+            margin-left: -(24/4) * 1px;
+            background-image: $sprite-background;
+            background-repeat: no-repeat;
+            background-size: $sprite-bg-size;
+            @include background-position (177,93);
+            @include half-width-height(24,24); 
+        }
+    }
+
+    .taggle_list .taggle:hover {
+        border-color: rgba(230, 58, 58, 1);
+    }
+
+    .taggle_list .taggle:hover > .close {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .taggle_list .taggle .close:hover {
+        color: #fff;
+    }
+
+    .taggle_placeholder {
+        position: absolute;
+        color: #CCC;
+        top: 13px;
+        left: 0;
+        transition: opacity, .25s;
+        user-select: none;
+        font-size: 12px;
+        width: auto;
+        line-height: normal !important;
+        min-width: 100px;
+        font-family: $light-text;
+    }
+
+    .taggle_input {
+        padding: 8px;
+        padding-left: 0;
+        float: left;
+        background: none;
+        width: 100%;
+        max-width: 100%;
+        line-height: normal;
+        font-size: 12px;
+        font-family: $light-text;
+        position: relative;
+        top: 5px;
+    }
+
+    .taggle_sizer {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: -500px;
+        z-index: -1;
+        visibility: hidden;
+        line-height: normal;
+    }
+
+    /*container styles*/
+    textarea.input,
+    .textarea.input {
+        border: 0;
+        background: #FDFDFD;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(255, 255, 255, 0.7);
+        min-height: 60px;
+        padding: 8px;
+        border-radius: 3px;
+        color: #555;
+        transition: all .25s;
+        cursor: text;
+        margin-bottom: 10px;
+        position: relative;
+        line-height: normal;
+    }
+
+    .textarea.input:focus,
+    .textarea.input.active,
+    textarea.input:focus,
+    textarea.input.active {
+        background: #fff;
+        transition: all .25s;
+    }
+
+    .textarea.input,
+    textarea.input {
+        height: auto;
+    }
+
+
+    .textarea.tags {
+        position: relative;
+    }
+
+    .textarea.tags * {
+        box-sizing: content-box;
+    }
+
+
+    .placeholder_input {
+        position: relative;
+    }
+
+    .placeholder_input span {
+        position: absolute;
+        color: #AAA;
+        top: 50%;
+        margin-top: -11px;
+        left: 10px;
+    }
+
+    .placeholder_input input {
+        width: 120px;
+    }
+    .placeholder_input input {
+        width: 120px; 
+        line-height: normal;
+    }
+    
+    .ui-autocomplete {
+        position: absolute;
+        top: 50px;
+        left: 0; 
+        width: 180px;
+        height: 150px;
+        overflow: hidden;
+        overflow-y: scroll;
+    }    
+
+    .ui-menu {
+        list-style: none;
+        margin: 0;
+        display: block;
+        outline: none;
+    }    
+    .ui-widget-content {
+        background: rgba(0,0,0,0.85);
+        color: #fff; 
+        font-size: 12px !important;
+    }
+    .ui-menu .ui-menu-item a {
+        text-decoration: none;
+        display: block;
+        padding: 2px .4em;
+        line-height: 1.5;
+        min-height: 0;
+        font-weight: normal;
+        color: #fff;
+        cursor: pointer; 
+    }
+    .ui-menu .ui-menu-item a:hover {
+        color: #fff;
+        background: rgba(0,0,0,0.95);
+    }
+    .ui-state-hover,
+    .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover,
+    .ui-state-focus,
+    .ui-widget-content .ui-state-focus,
+    .ui-widget-header .ui-state-focus {
+        background: rgba(0,0,0,0.95);
+        color: #fff !important;
+        border-color: transparent;
+    }
+
+    .ui-state-hover a,
+    .ui-state-hover a:hover,
+    .ui-state-hover a:link,
+    .ui-state-hover a:visited {
+      color: #fff; 
+    }
+
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active {
+      border: 1px solid #aaaaaa;
+      background: #ffffff;
+      font-weight: normal;
+      color: #212121; 
+    }
+
+    .ui-helper-hidden {
+      display: none; 
+    }
+
+    .ui-helper-hidden-accessible {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px; }
+
+    .autocomplete {
+      max-height: 200px;
+      overflow: scroll;
+      position: absolute;
+      top: 66px;
+      background: white;
+      width: 99.5%;
+      left: 0.25%;
+      z-index: 2; 
+    }
+
+    .autocomplete ul li {
+      display: block;
+      padding: 6px 8px; 
+    }
+
+    .autocomplete ul li.selected, .autocomplete ul li:hover {
+      background: #ff6633;
+      color: #fff;
+      cursor: pointer; 
+    }
+
+}

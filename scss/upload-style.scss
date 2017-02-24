@@ -1,0 +1,295 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+#content-holder{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    padding-left: 4px;
+    position: relative;
+    #conHeader{
+        padding: 12px 20px 3px 0;
+        .title{
+            font-size: 24px;
+        }
+        .continueBtn{
+            position: relative;
+            button,
+            a{
+                width: 103px;
+                height: 40px;
+                font-size: 12px;
+                font-family: $bold-text;
+                color: $white;
+                border: 0;
+                border-radius: 0;
+                text-transform: uppercase;
+                background: $blue-1;
+                margin-top: 2px;
+                &.btn-disabled{
+                    background: $lgray-5;
+                }
+            }
+            i{
+                vertical-align: middle;
+                background-position: -108px -45px;
+                width: 20px;
+                height: 16px;
+            }
+            .warning-message{
+                width: 180px;
+                padding: 15px;
+                background: rgba(0,0,0,0.9);
+                color: $white;
+                font-size: 12px;
+                position: absolute;
+                top: 35px;
+                left: -137px;
+                z-index: 1;
+                visibility: hidden;
+                opacity: 0;
+                &:before{
+                    content: "";
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 5px solid rgba(0,0,0,0.9);
+                    position: absolute;
+                    top: -5px;
+                    right: 27px;
+                }
+            }
+            .icon-warning{
+                &:hover{
+                    ~ .warning-message{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    
+    #uploadField{
+        .stepHolder{
+            margin-bottom: 20px;
+            padding-right: 20px;
+            &.step2{
+                position: relative;
+            }
+            .step-label{
+                font-size: 11px;
+                font-family: $bold-text;
+                text-transform: uppercase;
+                display: inline-block;
+                position: relative;
+                padding-right: 12px;
+                margin-bottom: 3px;
+                &:before{
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    background: $red-1;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    margin-top: -6px;
+                }
+                &.good{
+                    &:before{
+                        background: $green-1;
+                    }
+                }
+                &.processing{
+                    &:before{
+                        background: $blue-1;
+                    }
+                }
+                &.warning{
+                    &:before{
+                        background: $orange-1;
+                    }
+                }
+                
+            }
+            .uploadCount{
+                float: right;
+                font-size: 10px;
+                position: relative;
+                bottom: -4px;
+                color: $lgray-3;
+            }
+            .faileduploadCount{
+                display: inline-block;
+                font-size: 10px;
+                color: $lgray-3;
+                margin-left: 10px;
+            }
+            
+        }
+        .assets-parent{
+            background: $white;
+            border: 1px solid $lgray-5;
+            padding: 4px 13px 5px 13px;
+            margin: 0;
+            list-style: none;
+            height: 36px;
+            > li{
+                display: inline-block;  
+                font-size: 12px;
+                color: $lgray-3;
+                width: 85px;
+                position: relative;
+                &:nth-child(4),
+                &:nth-child(5){
+                    width: 115px;
+                }
+                &:nth-child(6){
+                    width: auto;
+                }
+                label{
+                    font-weight: normal;
+                    position: relative;
+                    top: -3px;
+                }
+            }
+        }
+    }
+    
+    .file-item-con{
+        text-align: left;
+        padding: 10px 0;
+        height: 450px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .file-item{
+            display: block;
+            height: 25px;
+            .left{
+                width: 50%;
+                float: left;
+                > div{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .numCount{
+                    font-size: 10px;
+                    color: $lgray-3;
+                    padding: 0 15px;
+                }
+                .filename{
+                    font-size: 12px;
+                    font-weight: normal;
+                }
+            }
+            .right{
+                text-align: right;
+                width: 50%;
+                float: right;
+                > div{
+                    display: inline-block;
+                }
+                .preview{
+                    img{
+                        width: 100%;
+                        height: auto;
+                        max-width: 15px;
+                        vertical-align: middle;
+                    }
+                    margin-right: 10px;
+                }
+                .indicator{
+                    a{
+                        i{
+                            vertical-align: middle;
+                            margin-right: 15px;
+                        }
+                        &.approved{
+                            &:hover{
+                                i{
+                                    @include background-position (221,124);
+                                }
+                            }
+                        }
+                        &.failed{
+                            &:hover{
+                                i{
+                                    @include background-position (300,92);
+                                }
+                            }
+                        }
+                    }
+                    .loader{
+                        width: 100%;
+                        height: auto;
+                        max-width: 15px;
+                        margin-right: 15px;
+                    }
+                }
+            }
+            &:hover{
+                background: $lgray-6;
+            }
+        }
+    }
+    
+    .on-drag-pop{
+        width: 185px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        bottom: -15px;
+        margin-left: -92.5px;
+        visibility: hidden;
+        opacity: 0;
+        .box{
+            background: $blue-1;
+            color: $white;
+            font-size: 11px;
+            height: 35px;
+            line-height: 35px;
+            box-shadow: 0 0 10px #aaa;
+        }
+    }    
+    
+    #dropzone{
+        background: $white;
+        width: 100%;
+        height: 350px;
+        border-radius: 4px;
+        border: 1px dashed #d1d1d1;
+        position: relative;
+        input[type="file"]{
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        label{
+            text-align: center;
+            display: block;
+        }
+        .defCont{
+            height: 350px;
+            font-size: 12px;
+            color: $dgray-1;
+            font-weight: normal;
+            i{
+                margin-right: 10px;
+                width: 23px;
+                height: 28px;
+            }
+        }
+        &.is-dragover{
+            border-color: $blue-1;
+            & ~ .on-drag-pop{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    
+}

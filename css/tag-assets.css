@@ -1,0 +1,583 @@
+/* transition mixin */
+#tagAssets {
+  /*container styles*/
+}
+#tagAssets .stepHolder {
+  margin-top: 15px;
+}
+#tagAssets .vectto-tag-asset label {
+  position: relative;
+}
+#tagAssets #tagAssetsCon .assets-parent {
+  padding-left: 45px;
+  position: relative;
+}
+#tagAssets #tagAssetsCon .assets-parent .checkbox {
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  margin: 0;
+}
+#tagAssets #tagAssetsCon .assets-parent .checkbox > input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+#tagAssets #tagAssetsCon .assets-parent .checkbox > label {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  background: #fff;
+}
+#tagAssets #tagAssetsCon .assets-parent .vectto-tag {
+  width: auto;
+}
+#tagAssets #tagAssetsCon .tag-assets-con {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con {
+  padding: 0;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item {
+  height: 50px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .checkbox {
+  margin: 0;
+  margin-left: 10px;
+  overflow: hidden;
+  position: relative;
+  top: 5px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .checkbox > label {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  background: #fff;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .indicator-count {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  font-family: "aileronlight";
+  background: #ee383d;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .indicator-count.success {
+  background: #2bbb43;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .left .left-wrap {
+  display: inline-block;
+  width: 215px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .left .left-wrap > div {
+  float: left;
+  line-height: 48px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .left .filename {
+  max-width: 117px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .right {
+  line-height: 48px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .right .preview {
+  max-width: 30px;
+  width: 100%;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .right .preview img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  margin-top: -7px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .link-section .link-icon {
+  background-image: url("../images/sprite.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  display: inline-block;
+  background-position: -23.5px -72px;
+  width: 15px;
+  height: 6px;
+  margin-left: 8px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .link-section .link-icon:hover, #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .link-section .link-icon.active {
+  background-position: -23.5px -78.5px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section {
+  position: relative;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > label {
+  padding-top: 5px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > label .label {
+  position: absolute;
+  top: 0;
+  left: -7px;
+  color: #aaa;
+  font-size: 12px;
+  font-weight: normal;
+  pointer-events: none;
+  font-family: "aileronlight";
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > label input {
+  width: auto !important;
+  border: none;
+  padding: 0;
+  color: #202020;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: "aileronlight";
+  background: transparent;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > label input:focus ~ .label {
+  display: none;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 180px;
+  z-index: 2;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop ul {
+  list-style: none;
+  padding: 0;
+  height: 150px;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: 0;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop ul li {
+  position: relative;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop ul li > .edit-area > span {
+  font-size: 12px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop ul li > .edit-area > span .icon-edit {
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  margin-left: 8px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop ul li > .edit-area > .badge {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  background: none;
+  font-weight: normal;
+  font-size: 10px;
+  color: #aaa;
+  line-height: 17px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop ul li:hover:not(.editable) {
+  background: #2c3e50;
+  cursor: default;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop ul li:hover:not(.editable):before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #f9903a;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop ul li:hover:not(.editable) > .edit-area > span .icon-edit {
+  visibility: visible;
+  opacity: 1;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop .addnew {
+  background: #2d76fc;
+  visibility: hidden;
+  opacity: 0;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop .addnew .input-group > div.form-control {
+  background: none;
+  border: none;
+  font-size: 10px;
+  color: #fff;
+  padding: 10px 12px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop .addnew .input-group .input-group-btn button {
+  border: none;
+  background: none;
+  font-size: 10px;
+  color: #fff;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop .addnew.show {
+  visibility: visible;
+  opacity: 1;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop .editable {
+  position: relative;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop .editable .editold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: #727272;
+  height: 30px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop .editable .input-group input {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #fff;
+  padding: 10px;
+  height: 30px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop .editable .input-group .input-group-btn button {
+  border: none;
+  background: none;
+  font-size: 10px;
+  color: #fff;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop.show, #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section > .drop.onfucos {
+  display: block;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .tag-item {
+  line-height: 20px;
+}
+#tagAssets .tag-container {
+  float: left;
+}
+#tagAssets .tag-item {
+  border: 1px solid #ccc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  display: block;
+  float: left;
+  padding: 0 5px;
+  text-decoration: none;
+  background: #fff;
+  color: #638421;
+  margin-right: 5px;
+  font-family: "aileronlight";
+  font-size: 12px;
+  position: relative;
+  border-radius: 0;
+  font-weight: normal;
+}
+#tagAssets .tag-item.new-tag {
+  background: #fff;
+  color: #202020;
+  border-color: #ccc;
+}
+#tagAssets .tag-item.existing-tag {
+  background: #dddddd;
+  color: #202020;
+  border-color: #dddddd;
+}
+#tagAssets .tag-item a {
+  font-weight: bold;
+  color: #82ad2b;
+  text-decoration: none;
+  font-size: 11px;
+  background: rgba(222, 75, 75, 0.85);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  display: block;
+  text-align: center;
+}
+#tagAssets .tag-item a i {
+  vertical-align: middle;
+}
+#tagAssets .tag-item:hover {
+  border-color: #de4b4b;
+}
+#tagAssets .tag-item:hover > a {
+  visibility: visible;
+  opacity: 1;
+}
+#tagAssets .taggle_list {
+  float: left;
+  width: 100%;
+  padding: 0;
+}
+#tagAssets .taggle_input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  min-width: 100px;
+}
+#tagAssets .taggle_list li {
+  float: left;
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 500;
+}
+#tagAssets .taggle_list .taggle {
+  margin-right: 3px;
+  padding: 0 5px;
+  border-radius: 0;
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+#tagAssets .taggle_list .taggle .taggle_text {
+  font-size: 12px;
+  color: #202020;
+  padding: 0;
+  margin: 0;
+  vertical-align: text-top;
+}
+#tagAssets .taggle_list .taggle.new-taggle {
+  background: #2bbb43;
+  border-color: #2bbb43;
+}
+#tagAssets .taggle_list .taggle.new-taggle > .taggle_text {
+  color: #fff;
+}
+#tagAssets .taggle_list .taggle_hot {
+  background: #cac8c4;
+}
+#tagAssets .taggle_list .taggle .close {
+  font-size: 1.1rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  text-decoration: none;
+  padding-left: 2px;
+  padding-top: 3px;
+  line-height: 0.5;
+  color: #fff;
+  padding-bottom: 4px;
+  display: block;
+  border: 0;
+  background: rgba(230, 58, 58, 0.85);
+  cursor: pointer;
+  z-index: 1;
+  font-size: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+#tagAssets .taggle_list .taggle .close:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -6px;
+  margin-left: -6px;
+  background-image: url("../images/sprite.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: -88.5px -46.5px;
+  width: 12px;
+  height: 12px;
+}
+#tagAssets .taggle_list .taggle:hover {
+  border-color: #e63a3a;
+}
+#tagAssets .taggle_list .taggle:hover > .close {
+  opacity: 1;
+  visibility: visible;
+}
+#tagAssets .taggle_list .taggle .close:hover {
+  color: #fff;
+}
+#tagAssets .taggle_placeholder {
+  position: absolute;
+  color: #CCC;
+  top: 13px;
+  left: 0;
+  transition: opacity, .25s;
+  user-select: none;
+  font-size: 12px;
+  width: auto;
+  line-height: normal !important;
+  min-width: 100px;
+  font-family: "aileronlight";
+}
+#tagAssets .taggle_input {
+  padding: 8px;
+  padding-left: 0;
+  float: left;
+  background: none;
+  width: 100%;
+  max-width: 100%;
+  line-height: normal;
+  font-size: 12px;
+  font-family: "aileronlight";
+  position: relative;
+  top: 5px;
+}
+#tagAssets .taggle_sizer {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: -500px;
+  z-index: -1;
+  visibility: hidden;
+  line-height: normal;
+}
+#tagAssets textarea.input,
+#tagAssets .textarea.input {
+  border: 0;
+  background: #FDFDFD;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(255, 255, 255, 0.7);
+  min-height: 60px;
+  padding: 8px;
+  border-radius: 3px;
+  color: #555;
+  transition: all .25s;
+  cursor: text;
+  margin-bottom: 10px;
+  position: relative;
+  line-height: normal;
+}
+#tagAssets .textarea.input:focus,
+#tagAssets .textarea.input.active,
+#tagAssets textarea.input:focus,
+#tagAssets textarea.input.active {
+  background: #fff;
+  transition: all .25s;
+}
+#tagAssets .textarea.input,
+#tagAssets textarea.input {
+  height: auto;
+}
+#tagAssets .textarea.tags {
+  position: relative;
+}
+#tagAssets .textarea.tags * {
+  box-sizing: content-box;
+}
+#tagAssets .placeholder_input {
+  position: relative;
+}
+#tagAssets .placeholder_input span {
+  position: absolute;
+  color: #AAA;
+  top: 50%;
+  margin-top: -11px;
+  left: 10px;
+}
+#tagAssets .placeholder_input input {
+  width: 120px;
+}
+#tagAssets .placeholder_input input {
+  width: 120px;
+  line-height: normal;
+}
+#tagAssets .ui-autocomplete {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 180px;
+  height: 150px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+#tagAssets .ui-menu {
+  list-style: none;
+  margin: 0;
+  display: block;
+  outline: none;
+}
+#tagAssets .ui-widget-content {
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 12px !important;
+}
+#tagAssets .ui-menu .ui-menu-item a {
+  text-decoration: none;
+  display: block;
+  padding: 2px .4em;
+  line-height: 1.5;
+  min-height: 0;
+  font-weight: normal;
+  color: #fff;
+  cursor: pointer;
+}
+#tagAssets .ui-menu .ui-menu-item a:hover {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.95);
+}
+#tagAssets .ui-state-hover,
+#tagAssets .ui-widget-content .ui-state-hover,
+#tagAssets .ui-widget-header .ui-state-hover,
+#tagAssets .ui-state-focus,
+#tagAssets .ui-widget-content .ui-state-focus,
+#tagAssets .ui-widget-header .ui-state-focus {
+  background: rgba(0, 0, 0, 0.95);
+  color: #fff !important;
+  border-color: transparent;
+}
+#tagAssets .ui-state-hover a,
+#tagAssets .ui-state-hover a:hover,
+#tagAssets .ui-state-hover a:link,
+#tagAssets .ui-state-hover a:visited {
+  color: #fff;
+}
+#tagAssets .ui-state-active,
+#tagAssets .ui-widget-content .ui-state-active,
+#tagAssets .ui-widget-header .ui-state-active {
+  border: 1px solid #aaaaaa;
+  background: #ffffff;
+  font-weight: normal;
+  color: #212121;
+}
+#tagAssets .ui-helper-hidden {
+  display: none;
+}
+#tagAssets .ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+#tagAssets .autocomplete {
+  max-height: 200px;
+  overflow: scroll;
+  position: absolute;
+  top: 66px;
+  background: white;
+  width: 99.5%;
+  left: 0.25%;
+  z-index: 2;
+}
+#tagAssets .autocomplete ul li {
+  display: block;
+  padding: 6px 8px;
+}
+#tagAssets .autocomplete ul li.selected, #tagAssets .autocomplete ul li:hover {
+  background: #ff6633;
+  color: #fff;
+  cursor: pointer;
+}

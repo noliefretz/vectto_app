@@ -1,0 +1,12 @@
+.blockMsg {
+    padding: 10px; 
+    margin:0;
+    width:20%; 
+    top: 40%; 
+    left: 40%;
+    text-align: center;
+    color: #000;
+    border: 0;
+    background-color: #fff;
+    cursor: wait;
+}

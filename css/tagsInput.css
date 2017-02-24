@@ -1,0 +1,192 @@
+.vectto-editInPlace > label .label {
+  position: absolute;
+  top: 0;
+  left: -7px;
+  color: #aaa;
+  font-size: 12px;
+  font-weight: normal;
+  pointer-events: none;
+}
+.vectto-editInPlace > label input {
+  width: 95%;
+  border: none;
+  padding: 0;
+  color: #202020;
+}
+.vectto-editInPlace > label input:focus ~ .label {
+  display: none;
+}
+.vectto-editInPlace .drop {
+  display: none;
+  position: absolute;
+  top: 18px;
+  left: 3px;
+  width: 180px;
+  z-index: 2;
+}
+.vectto-editInPlace .drop ul {
+  list-style: none;
+  padding: 0;
+  height: 150px;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.vectto-editInPlace .drop ul li {
+  position: relative;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+}
+.vectto-editInPlace .drop ul li > .edit-area > span {
+  font-size: 12px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+.vectto-editInPlace .drop ul li > .edit-area > span .icon-edit {
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.vectto-editInPlace .drop ul li > .edit-area > .badge {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  background: none;
+  font-weight: normal;
+  font-size: 10px;
+  color: #aaa;
+  line-height: 17px;
+}
+.vectto-editInPlace .drop ul li:hover:not(.editable) {
+  /*background-color: rgba(0, 0, 0, 0.3);*/
+  background: #2c3e50;
+  cursor: default;
+}
+.vectto-editInPlace .drop ul li:hover:not(.editable):before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #f9903a;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.vectto-editInPlace .drop ul li:hover:not(.editable) > .edit-area > span .icon-edit {
+  visibility: visible;
+  opacity: 1;
+}
+.vectto-editInPlace .drop .addnew {
+  background: #2d76fc;
+  visibility: hidden;
+  opacity: 0;
+}
+.vectto-editInPlace .drop .addnew .input-group > div.form-control {
+  background: none;
+  border: none;
+  font-size: 10px;
+  color: #fff;
+  padding: 10px 12px;
+}
+.vectto-editInPlace .drop .addnew .input-group .input-group-btn button {
+  border: none;
+  background: none;
+  font-size: 10px;
+  color: #fff;
+}
+.vectto-editInPlace .drop .addnew.show {
+  visibility: visible;
+  opacity: 1;
+}
+.vectto-editInPlace .drop .editable {
+  position: relative;
+}
+.vectto-editInPlace .drop .editable .editold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: #727272;
+  height: 30px;
+}
+.vectto-editInPlace .drop .editable .input-group input {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #fff;
+  padding: 10px;
+  height: 30px;
+}
+.vectto-editInPlace .drop .editable .input-group .input-group-btn button {
+  border: none;
+  background: none;
+  font-size: 10px;
+  color: #fff;
+}
+.vectto-editInPlace .drop.show, .vectto-editInPlace .drop.onfocus {
+  display: block;
+}
+
+.tag-container {
+  float: left;
+}
+
+.tag-item {
+  border: 1px solid #a5d24a;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  display: block;
+  float: left;
+  padding: 0 5px;
+  text-decoration: none;
+  background: #cde69c;
+  color: #638421;
+  margin-right: 5px;
+  font-family: "aileronlight";
+  font-size: 12px;
+  position: relative;
+}
+.tag-item.new-tag {
+  background: #2d76fc;
+  color: #fff;
+  border-color: #2d76fc;
+}
+.tag-item.existing-tag {
+  background: #dddddd;
+  color: #202020;
+  border-color: #dddddd;
+}
+.tag-item a {
+  font-weight: bold;
+  color: #82ad2b;
+  text-decoration: none;
+  font-size: 11px;
+  background: rgba(222, 75, 75, 0.85);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  display: block;
+  text-align: center;
+}
+.tag-item a i {
+  vertical-align: middle;
+}
+.tag-item:hover {
+  border-color: #de4b4b;
+}
+.tag-item:hover > a {
+  visibility: visible;
+  opacity: 1;
+}
+.vectto-tag{
+    width: auto;
+}
+
+/*# sourceMappingURL=tagsInput.css.map */

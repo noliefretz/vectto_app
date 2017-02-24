@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+}
+div.container {
+    width: 100%;
+    max-width: 480px;
+    min-width: 480px;
+    background: #fff;
+    padding: 50px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    transform: translateY(50%);
+    text-align: center;
+    min-height: 400px;
+}
+div.container h1 {
+    font-weight: normal;
+    color: #2C2620;
+    margin-top: 20px;
+}
+div.container p {
+    margin-top: 20px;
+}
+div.container a.action_link {
+    display: block;
+    margin-top: 30px;
+}

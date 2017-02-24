@@ -1,0 +1,567 @@
+/* transition mixin */
+#loginModal .modal-dialog,
+#signupModal .modal-dialog,
+#forgotpasswordModal .modal-dialog,
+#newPassModal .modal-dialog{
+  max-width: 480px;
+}
+#loginModal .modal-content,
+#signupModal .modal-content,
+#forgotpassword .modal-content,
+#newPassModal .modal-content{
+  border-radius: 0;
+}
+#forgotpasswordModal .input-group{
+  width: 100%;
+}
+#forgotpasswordModal .modal-content .modal-body,
+#loginModal .modal-content .modal-body,
+#signupModal .modal-content .modal-body,
+#newPassModal .modal-content .modal-body{
+  padding: 0;
+}
+.l-wrapper #forgotpassword{
+  margin: 59px auto 0 auto;
+  width: 20%;
+}
+.l-wrapper,
+.s-wrapper{
+  margin-top: 59px;
+
+}
+.l-wrapper #forgotpassword .input-group{
+  display: block;
+ 
+}
+.l-wrapper #forgotpassword .midForm .form-group .input-group input[type='email']{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.l-wrapper #forgotpassword{
+  width: 20%;
+  background-color: rgb(255, 255, 255);
+  padding: 50px 15px;
+  margin: 0px auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(199, 199, 199);
+  -o-border-image: initial;
+  border-image: initial;
+}
+.l-wrapper #forgotpassword,
+.l-wrapper #login,
+.s-wrapper #signup{
+  padding: 50px 15px;
+  width: 20%;
+  margin: 0 auto;
+  border: 1px solid #c7c7c7;
+  background-color: #fff;
+}
+#forgotpassword,
+#login,
+#signup,
+#newPass,
+#loginSingle,
+#signupSingle,
+#forgotpasswordSingle{
+  padding: 50px 15px;
+  width: 100%;
+  border: 1px solid #c7c7c7;
+  clear: both;
+  overflow: hidden;
+}
+#login .alert,
+#signup .alert {
+  font-size: 12px;
+  border-radius: 0;
+  padding: 10px;
+}
+#forgotpassword form,
+#login form,
+#signup form,
+#forgotpasswordSingle form,
+#newPass form,
+#loginSingle form,
+#signupSingle form{
+  max-width: 300px;
+  margin: 0 auto;
+}
+#forgotpassword .topForm,
+#login .topForm,
+#signup .topForm,
+#forgotpasswordSingle .topForm,
+#newPass .topForm,
+#loginSingle .topForm,
+#signupSingle .topForm,
+#loginSingle .topForm{
+  margin-bottom: 28px;
+}
+#forgotpassword .topForm img,
+#login .topForm img,
+#signup .topForm img,
+#forgotpasswordSingle .topForm img,
+#newPass .topForm img,
+#signupSingle .topForm img,
+#loginSingle .topForm img{
+  width: 100%;
+  height: auto;
+  max-width: 39.5px;
+}
+#forgotpassword .topForm h2,
+#login .topForm h2,
+#signup .topForm h2,
+#forgotpasswordSingle .topForm h2,
+#newPass .topForm h2,
+#loginSingle .topForm h2,
+#signupSingle .topForm h2{
+  font-size: 28px;
+  font-family: "aileronlight";
+  padding-left: 15px;
+}
+#login .midForm .form-group,
+#signup .midForm .form-group,
+#forgotpasswordSingle .midForm .form-group,
+#newPass .midForm .form-group,
+#loginSingle .midForm .form-group,
+#signupSingle .midForm .form-group{
+  margin-bottom: 9px;
+  position: relative;
+}
+#login .midForm .form-group input,
+#signup .midForm .form-group input,
+#forgotpasswordSingle .form-group input,
+#newPass .form-group input,
+#loginSingle .form-group input,
+#signupSingle .midForm .form-group input{
+  border-radius: 0;
+  border: 1px solid #ccc;
+  height: 40px;
+}
+#login .midForm .form-group input:focus,
+#signup .midForm .form-group input:focus,
+#forgotpasswordSingle .form-group input:focus,
+#newPass .midForm .form-group input:focus,
+#loginSingle .form-group input:focus,
+#signupSingle .midForm .form-group input:focus{
+  box-shadow: none;
+}
+#login .midForm .input-group,
+#signup .midForm .input-group,
+#newPass .midForm .input-group,
+#forgotpasswordSingle .form-group,
+#loginSingle .input-group,
+#signupSingle .midForm .input-group{
+  margin-bottom: 9px;
+  position: relative;
+}
+#login .midForm .input-group input,
+#signup .midForm .input-group input,
+#newPass .midForm .input-group input,
+#forgotpasswordSingle .input-group input,
+#loginSingle .input-group input,
+#signupSingle .midForm .input-group input{
+  border: 1px solid #ccc;
+  border-radius: 0;
+  border-right: 0;
+  height: 40px;
+}
+#forgotpassword .input-group input{
+  border: 1px solid #ccc;
+  border-radius: 0;
+  height: 40px;  
+}
+#login .midForm .input-group input:focus,
+#signup .midForm .input-group input:focus,
+#forgotpasswordSingle .input-group input:focus,
+#newPass .midForm .input-group input:focus,
+#loginSingle .midForm .input-group input:focus,
+#signupSingle .midForm .input-group input:focus{
+  box-shadow: none;
+  outline: none;
+}
+#login .midForm .input-group .input-group-addon,
+#signup .midForm .input-group .input-group-addon,
+#forgotpasswordSingle .midForm .input-group .input-group-addon,
+#newPass .midForm .input-group .input-group-addon,
+#newPass .midForm .input-group .input-group-addon,
+#loginSingle .midForm .input-group .input-group-addon,
+#signupSingle .midForm .input-group .input-group-addon{
+  border: 1px solid #ccc;
+  border-radius: 0;
+  border-left: 0;
+  background: #fff;
+  cursor: pointer;
+}
+#login .midForm .input-group .input-group-addon button,
+#signup .midForm .input-group .input-group-addon button,
+#forgotpasswordSingle .midForm .input-group .input-group-addon div,
+#newPass .midForm .input-group .input-group-addon div,
+#loginSingle .midForm .input-group .input-group-addon div,
+#signupSingle .midForm .input-group .input-group-addon div{
+  background: none;
+  padding: 0;
+  border: 0;
+}
+#login .midForm .sbmit-btn,
+#login .midForm .forgot-pass,
+#signup .midForm .sbmit-btn,
+#signup .midForm .forgot-pass,
+#newPass .midForm .forgot-pass,
+#loginSingle .midForm .forgot-pass,
+#loginSingle .midForm .sbmit-btn,
+#signupSingle .midForm .forgot-pass,
+#signupSingle .midForm .sbmit-btn{
+  width: 50%;
+  float: left;
+  margin-bottom: 9px;
+}
+#login .midForm .sbmit-btn button,
+#signup .midForm .sbmit-btn button,
+#forgotpassword .midForm .sbmit-btn button,
+#forgotpasswordSingle .midForm .sbmit-btn button, 
+#newPass .midForm .sbmit-btn button,
+#loginSingle .midForm .sbmit-btn button,
+#signupSingle .midForm .sbmit-btn button{
+  max-width: 120px;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  background: #2d76fc;
+  color: #fff;
+  font-size: 16px;
+  height: 40px;
+  font-family: "aileronbold";
+}
+#login .midForm .sbmit-btn button:hover,
+#signup .midForm .sbmit-btn button:hover,
+#forgotpasswordSingle .midForm .sbmit-btn button:hover,
+#newPass .midForm .sbmit-btn button:hover,
+#loginSingle .midForm .sbmit-btn button:hover,
+#signupSingle .midForm .sbmit-btn button:hover{
+  opacity: 0.8;
+}
+#login .midForm .sbmit-btn button.btn-disabled,
+#signup .midForm .sbmit-btn button.btn-disabled,
+#forgotpasswordSingle .midForm .sbmit-btn button.btn-disabled,
+#newPass .midForm .sbmit-btn button.btn-disabled,
+#loginSingle .midForm .sbmit-btn button.btn-disabled,
+#signupSingle .midForm .sbmit-btn button.btn-disabled{
+  pointer-events: none;
+}
+#login .midForm .sbmit-btn button.btn-disabled:hover,
+#signup .midForm .sbmit-btn button.btn-disabled:hover,
+#forgotpasswordSingle .midForm .sbmit-btn button.btn-disabled:hover,
+#newPass .midForm .sbmit-btn button.btn-disabled:hover,
+#loginSingle .midForm .sbmit-btn button.btn-disabled:hover,
+#signupSingle .midForm .sbmit-btn button.btn-disabled:hover{
+  background: #2d76fc;
+}
+#login .midForm .forgot-pass,
+#signup .midForm .forgot-pass,
+#loginSingle .midForm .forgot-pass{
+  line-height: 40px;
+  text-align: right;
+}
+#login .midForm .forgot-pass a,
+#signup .midForm .forgot-pass a,
+#loginSingle .midForm .forgot-pass a,
+.returnLogin{
+  font-size: 12px;
+  color: #aaa;
+}
+#login .midForm .forgot-pass a:hover,
+#signup .midForm .forgot-pass a:hover,
+#loginSingle .midForm .forgot-pass a:hover{
+  color: #2d76fc;
+}
+#login .botForm,
+#signup .botForm,
+#loginSingle .botForm,
+#signupSingle .botForm{
+  clear: both;
+  padding-top: 41px;
+}
+#login .botForm ul,
+#signup .botForm ul,
+#loginSingle .botForm ul,
+#signupSingle .botForm ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#login .botForm ul li,
+#signup .botForm ul li,
+#loginSingle .botForm ul li,
+#signupSingle .botForm ul li{
+  display: block;
+  height: 52px;
+  line-height: 50px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+#login .botForm ul li a,
+#signup .botForm ul li a,
+#loginSingle .botForm ul li a,
+#signupSingle .botForm ul li a{
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #aaa;
+}
+#login .botForm ul li a > i,
+#signup .botForm ul li a > i,
+#loginSingle .botForm ul li a > i,
+#signupSingle .botForm ul li a > i {
+  margin-right: 10px;
+}
+#login .botForm ul li a:hover,
+#signup .botForm ul li a:hover,
+#loginSingle .botForm ul li a:hover,
+#signupSingle .botForm ul li a:hover{
+  background: #3b5998;
+  border-color: #3b5998;
+  color: #fff;
+}
+#login .botForm ul li a:hover > i,
+#signup .botForm ul li a:hover > i,
+#loginSingle .botForm ul li a:hover > i,
+#signupSingle .botForm ul li a:hover > i {
+  background-position: -175px -25px;
+}
+#login .botForm ul li:nth-child(2),
+#signup .botForm ul li:nth-child(2),
+#loginSingle .botForm ul li:nth-child(2),
+#signupSingle .botForm ul li:nth-child(2){
+  border-top: 0;
+  margin-top: -1px;
+  position: relative;
+  z-index: 1;
+}
+#login .botForm ul li:nth-child(2) a,
+#signup .botForm ul li:nth-child(2) a,
+#loginSingle .botForm ul li:nth-child(2) a,
+#signupSingle .botForm ul li:nth-child(2) a {
+  border-top: 0;
+}
+#login .botForm ul li:nth-child(2) a > i,
+#signup .botForm ul li:nth-child(2) a > i,
+#loginSingle .botForm ul li:nth-child(2) a > i,
+#signupSingle .botForm ul li:nth-child(2) a > i {
+  margin-right: 5px;
+}
+#login .botForm ul li:nth-child(2) a:hover,
+#signup .botForm ul li:nth-child(2) a:hover,
+#loginSingle .botForm ul li:nth-child(2) a:hover,
+#signupSingle .botForm ul li:nth-child(2) a:hover {
+  background: #d9534f;
+  color: #fff;
+  border-color: #d9534f;
+}
+#login .botForm ul li:nth-child(2) a:hover > i,
+#signup .botForm ul li:nth-child(2) a:hover > i,
+#loginSingle .botForm ul li:nth-child(2) a:hover > i,
+#signupSingle .botForm ul li:nth-child(2) a:hover > i {
+  background-position: -195px -25px;
+}
+
+#signupModal .midForm .input-group,
+#signupSingle .midForm .input-group {
+  margin-bottom: 0;
+}
+#signupModal .midForm .input-group input,
+#signupSingle .midForm .input-group input {
+  border-bottom: 0;
+}
+#signupModal .midForm .input-group .input-group-addon,
+#signupSingle .midForm .input-group .input-group-addon {
+  border-bottom: 0;
+}
+#signupModal .midForm .form-group,
+#signupSingle .midForm .form-group {
+  position: relative;
+}
+#signupModal .midForm .form-group label,
+#signupSingle .midForm .form-group label {
+  position: relative;
+  margin: 0;    
+}
+#signupModal .midForm .form-group label:before,
+#signupSingle .midForm .form-group label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #aaa;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+#signupModal .midForm .form-group label > span,
+#signupSingle .midForm .form-group label >span {
+  display: inline-block;
+  font-family: "aileronlight";
+  font-size: 13px;
+  position: relative;
+  font-weight: normal;
+  line-height: 16px;
+  padding-left: 26px;
+}
+#signupModal .midForm .form-group > span,
+#signupSingle .midForm .form-group > span {
+  display: inline-block;
+  font-family: "aileronlight";
+  font-size: 13px;
+  position: relative;
+  font-weight: normal;
+  line-height: 16px;    
+}
+#signupModal .midForm .form-group span a,
+#signupSingle .midForm .form-group span a {
+  color: #202020;
+  text-decoration: underline !important;
+}
+#signupModal .midForm .form-group input[type="checkbox"],
+#signupSingle .midForm .form-group input[type="checkbox"] {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#signupModal .midForm .form-group input[type="checkbox"]:checked ~ label:before,
+#signupSingle .midForm .form-group input[type="checkbox"]:checked ~ label:before {
+  background: #2d76fc;
+  border-color: #2d76fc;
+}
+#signupModal .midForm .form-group input[type="checkbox"]:checked ~ label:after,
+#signupSingle .midForm .form-group input[type="checkbox"]:checked ~ label:after {
+  content: "";
+  width: 4px;
+  height: 8px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 2;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#signupModal .midForm .signup-btn button,
+#signupSingle .midForm .signup-btn button {
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  height: 60px;
+  background: #2d76fc;
+  color: #fff;
+  font-family: "aileronbold";
+  font-size: 20px;
+}
+#signupModal .midForm .signup-btn button:hover,
+#signupSingle .midForm .signup-btn button:hover {
+  opacity: 0.8;
+}
+#signupModal .midForm .signup-btn button.btn-disabled,
+#signupSingle .midForm .signup-btn button.btn-disabled {
+  pointer-events: none;
+}
+#signupModal .midForm .signup-btn button.btn-disabled:hover,
+#signupSingle .midForm .signup-btn button.btn-disabled:hover {
+  background: #2d76fc;
+}
+
+.modal {
+  text-align: center;
+  padding: 0 !important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.clr{
+  clear: both;
+}
+
+#forgotpasswordSingle,
+#loginSingle,
+#signupSingle{
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  padding: 50px 0;
+  border: 1px solid #ddd;
+}
+#forgotpasswordSingle .topForm {
+  width: 100%;
+}
+#forgotpasswordSingle .sbmit-btn button,
+#forgotpassword .sbmit-btn button,
+#newPass .sbmit-btn button{
+  max-width: 100% !important;
+  height: 50px !important;
+}
+#forgotpasswordSingle .input-group{
+  margin-bottom: 10px;
+}
+#forgotpasswordSingle .input-group input{
+  height: 40px !important;
+}
+
+#signup .midForm .agreeTerms,
+#signupSingle .midForm .agreeTerms{
+  padding: 10px 0;
+}
+
+.singlePageContainer{
+  height: 100vh;
+}
+#responseMessage{
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+/* tooltip style */
+.tooltip{
+  font-family: "aileronregular";
+  opacity: 1;
+  display: none;
+}
+.tooltip-inner{
+  background: #e74c3c;    
+  border-radius: 0;
+}
+.tooltip-arrow{
+  border-bottom-color: #e74c3c !important;
+}
+
+.returnLogin{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.signup-notif{
+    font-size: 11px;
+    font-family: "aileronregular";
+}
+.signup-notif strong{
+    display: block;
+    font-weight: 500;
+    font-family: "aileronsemibold"; 
+    font-size: 20px;
+}

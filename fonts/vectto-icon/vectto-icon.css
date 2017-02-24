@@ -1,0 +1,216 @@
+@font-face {
+  font-family: 'vectto';
+  src:  url('vectto.eot?6aps13');
+  src:  url('vectto.eot?6aps13#iefix') format('embedded-opentype'),
+    url('vectto.ttf?6aps13') format('truetype'),
+    url('vectto.woff?6aps13') format('woff'),
+    url('vectto.svg?6aps13#vectto') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'vectto' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vectto_bulb:before {
+  content: "\e93b";
+}
+.icon-vectto_like:before {
+  content: "\e93c";
+}
+.icon-vectto_order_icon:before {
+  content: "\e93d";
+}
+.icon-vectto_request_icon:before {
+  content: "\e93e";
+}
+.icon-forward:before {
+  content: "\e939";
+}
+.icon-back:before {
+  content: "\e93a";
+}
+.icon-paper-plane:before {
+  content: "\e900";
+}
+.icon-search_1:before {
+  content: "\e901";
+}
+.icon-puzzle:before {
+  content: "\e902";
+}
+.icon-bow_tie:before {
+  content: "\e903";
+}
+.icon-briefcase:before {
+  content: "\e904";
+}
+.icon-custom_icon_design:before {
+  content: "\e905";
+}
+.icon-custom_icons:before {
+  content: "\e906";
+}
+.icon-editable:before {
+  content: "\e907";
+}
+.icon-favorites:before {
+  content: "\e908";
+}
+.icon-font_generator:before {
+  content: "\e909";
+}
+.icon-glasses:before {
+  content: "\e90a";
+}
+.icon-html:before {
+  content: "\e90b";
+}
+.icon-library:before {
+  content: "\e90c";
+}
+.icon-box:before {
+  content: "\e90d";
+}
+.icon-paid_plan:before {
+  content: "\e90e";
+}
+.icon-pentool:before {
+  content: "\e90f";
+}
+.icon-plane:before {
+  content: "\e910";
+}
+.icon-professional_icon:before {
+  content: "\e911";
+}
+.icon-search_2:before {
+  content: "\e912";
+}
+.icon-shades:before {
+  content: "\e913";
+}
+.icon-shoes:before {
+  content: "\e914";
+}
+.icon-stiletto:before {
+  content: "\e915";
+}
+.icon-suit:before {
+  content: "\e916";
+}
+.icon-team_accounts:before {
+  content: "\e917";
+}
+.icon-tie:before {
+  content: "\e918";
+}
+.icon-umbrella:before {
+  content: "\e919";
+}
+.icon-vectto_community:before {
+  content: "\e91a";
+}
+.icon-vote_matters:before {
+  content: "\e91b";
+}
+.icon-web_app_library:before {
+  content: "\e91c";
+}
+.icon-agency:before {
+  content: "\e91d";
+}
+.icon-ala_carte:before {
+  content: "\e91e";
+}
+.icon-auto_renew:before {
+  content: "\e91f";
+}
+.icon-basic_membership:before {
+  content: "\e920";
+}
+.icon-custom_icon:before {
+  content: "\e921";
+}
+.icon-freelancer:before {
+  content: "\e922";
+}
+.icon-pricing:before {
+  content: "\e923";
+}
+.icon-studio:before {
+  content: "\e924";
+}
+.icon-users:before {
+  content: "\e925";
+}
+.icon-hide_password:before {
+  content: "\e926";
+}
+.icon-info:before {
+  content: "\e927";
+}
+.icon-membership_checkout:before {
+  content: "\e928";
+}
+.icon-payment_successful:before {
+  content: "\e929";
+}
+.icon-show_password:before {
+  content: "\e92a";
+}
+.icon-all_questions:before {
+  content: "\e92b";
+}
+.icon-stars:before {
+  content: "\e92c";
+}
+.icon-license:before {
+  content: "\e92d";
+}
+.icon-membership:before {
+  content: "\e92e";
+}
+.icon-24-hours:before {
+  content: "\e92f";
+}
+.icon-approved:before {
+  content: "\e930";
+}
+.icon-approved_folder:before {
+  content: "\e931";
+}
+.icon-credit_back:before {
+  content: "\e932";
+}
+.icon-custom_icon2:before {
+  content: "\e933";
+}
+.icon-money:before {
+  content: "\e934";
+}
+.icon-private_people:before {
+  content: "\e935";
+}
+.icon-public_people:before {
+  content: "\e936";
+}
+.icon-you_may:before {
+  content: "\e937";
+}
+.icon-you_may_not:before {
+  content: "\e938";
+}
+

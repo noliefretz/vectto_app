@@ -1,0 +1,229 @@
+.vectto-editInPlace > label .label {
+  position: absolute;
+  top: 0;
+  left: -7px;
+  color: #aaa;
+  font-size: 12px;
+  font-weight: normal;
+  pointer-events: none;
+}
+.vectto-editInPlace > label input {
+  width: 90%;
+  border: none;
+  padding: 0;
+  color: #202020;
+}
+.vectto-editInPlace > label input:focus ~ .label {
+  display: none;
+}
+
+
+.autocomplete_box {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 180px;
+    z-index: 2;
+}
+.autocomplete_box ul {
+    list-style: none;
+    padding: 0;
+    /* LM: 2017-02-08 */
+    /*min-height: 150px;*/
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+.autocomplete_box ul li {
+    position: relative;
+    padding: 0 10px;
+    /*height: 30px;*/
+    line-height: 30px;
+}
+.autocomplete_box ul li > .edit-area > span {
+    font-size: 12px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+.autocomplete_box ul li > .edit-area > span .icon-edit {
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    margin-left: 8px;
+}
+.autocomplete_box ul li > .edit-area > .badge {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    background: none;
+    font-weight: normal;
+    font-size: 10px;
+    color: #aaa;
+    line-height: 17px;
+}
+.autocomplete_box ul li:hover:not(.editable) {
+    background-color: rgba(0, 0, 0, 0.95);
+    cursor: default;
+}
+/*.autocomplete_box ul li:hover:not(.editable):before {
+    content: "";
+    width: 7px;
+    height: 100%;
+    background: #f9903a;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.autocomplete_box ul li:hover:not(.editable) > .edit-area > span .icon-edit {
+    visibility: visible;
+    opacity: 1;
+}*/
+.autocomplete_box .addnew {
+    background: #2d76fc;
+    /*visibility: hidden;
+    opacity: 0;*/
+    display: none;
+}
+.autocomplete_box .addnew .input-group > div.form-control {
+    background: none;
+    border: none;
+    font-size: 10px;
+    color: #fff;
+    padding: 10px 12px;
+}
+.autocomplete_box .addnew .input-group .input-group-btn button {
+    border: none;
+    background: none;
+    font-size: 10px;
+    color: #fff;
+}
+.autocomplete_box .addnew.show {
+    visibility: visible;
+    opacity: 1;
+}
+.autocomplete_box .editable {
+    position: relative;
+}
+.autocomplete_box .editable .editold {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: #727272;
+    height: 30px;
+}
+.autocomplete_box .editable .input-group input {
+    background: none;
+    border: none;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px;
+    height: 30px;
+}
+.autocomplete_box .editable .input-group .input-group-btn button {
+    border: none;
+    background: none;
+    font-size: 10px;
+    color: #fff;
+}
+.autocomplete_box.show,
+.autocomplete_box.onfocus {
+    display: block;
+}
+
+
+/* RAFFY STYLES BELOW */
+
+
+
+
+.v_ac_box {
+    /* See: http://www.w3schools.com/howto/howto_js_dropdown.asp*/
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /*background-color: #000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow-y: scroll;
+    overflow-x: visible;
+    color: #fff;*/
+}
+
+.v_ac_item {
+    
+}
+
+.v_ac_item.v_ac_selected {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: default; 
+}
+
+.autocomplete_box ul li:hover {
+    cursor: default; 
+}
+
+.autocomplete_box ul li.v_ac_selected:not(.editable) {
+  background-color: rgba(0, 0, 0, 0.95);
+  /*background: #2c3e50;*/
+  cursor: default; 
+}
+  /* line 614, ../scss/default.scss */
+ .autocomplete_box ul li.v_ac_selected:not(.editable):before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: #f9903a;
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+  /* line 625, ../scss/default.scss */
+.autocomplete_box ul li.v_ac_selected:not(.editable) > .edit-area > span .icon-edit {
+    visibility: visible;
+    opacity: 1; 
+}
+
+
+.autocomplete_box ul.dropWrap {
+    margin-bottom: 0;
+}
+
+
+#v_ac_new_category_name {
+    overflow-x: hidden;
+}
+
+input.v_editable_input {
+    background-color: transparent;
+    color: #fff;
+    border:0;
+}
+
+.v_ac_editable_con {
+    background-color: #727272 !important;
+}
+
+.v_ac_cat_save a,
+.v_ac_cat_save a:hover,
+.v_ac_cat_save a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+span.v_cname b {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+
+.v_ac_add_new_item_con {
+    cursor: pointer;
+}
+
+.v_ac_add_new_item_con:hover {
+    background-color: #50BDFF;
+}

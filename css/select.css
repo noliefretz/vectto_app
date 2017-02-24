@@ -1,0 +1,94 @@
+/* transition mixin */
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  color: #202020;
+  width: 85px;
+  height: 20px;
+  line-height: 20px;
+  top: 3px;
+}
+
+.select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 0 15px;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.select-styled:after {
+  content: "";
+  background-image: url("../images/sprite.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: -232px 0px;
+  width: 8px;
+  height: 4.5px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+
+/*.select-styled:hover {
+    background-color: #b83729;
+}*/
+/*.select-styled:active, .select-styled.active {
+    background-color: #ab3326;
+}*/
+.select-styled:active:after, .select-styled.active:after {
+  top: 9px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 23px;
+  left: -3px;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  width: 170px;
+  overflow: hidden;
+}
+
+.select-options li {
+  margin: 0;
+  padding: 5px 0;
+  text-indent: 6px;
+  display: block !important;
+  color: #fff;
+  font-size: 12px;
+  border-left: 3px solid transparent;
+  width: 100%;
+  height: 30px;
+}
+.select-options li:not(:first-child):hover {
+  background-color: rgba(0, 0, 0, 0.85);
+  border-left-color: #f9903a;
+}
+
+.select-options li[rel="hide"]{
+  display: none !important;
+}
+.select-options li[rel=""]:hover{
+    cursor: default;
+}

@@ -1,0 +1,277 @@
+/* transition mixin */
+/*Sidebar*/
+/*----------------------------------------------------------------------------*/
+.sb-logo {
+  height: 60px;
+  padding-left: 10px;
+}
+.sb-logo .logo-img {
+  height: 30px;
+  width: 163px;
+}
+.sb-logo .logo-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar .nav li {
+  position: relative;
+  flex-wrap: wrap;
+}
+.sidebar .nav li + li {
+  margin-top: 0;
+}
+.sidebar .nav li span > span,
+.sidebar .nav li span > span:before {
+  color: #7f7f7f;
+  font-size: 13px;
+}
+.sidebar .nav li img {
+  width: 16px;
+  height: auto;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+.sidebar .nav li > .drop {
+  flex: 1;
+  padding: 0;
+  margin-top: 10px;
+  display: none;
+}
+.sidebar .nav li > .drop > li {
+  padding: 10px 0;
+}
+.sidebar .nav li > .drop > li > p {
+  position: relative;
+}
+.sidebar .nav li > .drop > li > p:before {
+  content: "";
+  width: 1px;
+  height: calc(100% + 20px);
+  background: #ccc;
+  position: absolute;
+  top: -10px;
+  left: 30px;
+}
+.sidebar .nav li > .drop > li input:checked ~ .checkbox-grp > label:after {
+  content: "";
+  border: 1px solid #fff;
+  height: 9px;
+  width: 5px;
+  position: absolute;
+  right: 0;
+  top: 14px;
+  transform: rotate(45deg);
+  border-left: 0;
+  border-top: 0;
+}
+.sidebar .nav li input {
+  border: 0 none;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: "aileronlight";
+  font-size: 13px;
+  height: 40px;
+  outline: none;
+}
+.sidebar .nav li input:focus {
+  box-shadow: none;
+}
+.sidebar .nav li input:checked ~ .checkbox-grp > label:before {
+  background-color: #2d76fc;
+  border-color: #2d76fc;
+}
+.sidebar .nav li input:checked ~ .checkbox-grp > label:after {
+  content: "";
+  border: 1px solid #fff;
+  height: 9px;
+  width: 5px;
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  transform: rotate(45deg);
+  border-left: 0;
+  border-top: 0;
+}
+.sidebar .nav li input:checked ~ .drop {
+  display: block;
+}
+.sidebar .nav li input:checked ~ .has-more span > span:before {
+  content: "";
+  background-position: -138px -10px;
+}
+.sidebar .nav li input:checked ~ .has-more + .checkbox-grp > label:after {
+  height: 1px;
+  width: 9px;
+  border: none;
+  background: #fff;
+  transform: none;
+  right: 12.50px;
+  top: 18.5px;
+}
+.sidebar .nav li p.has-more span > span {
+  display: inline-block;
+}
+.sidebar .nav li p.has-more span > span:before {
+  content: "";
+  background-image: url("../images/sprite.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  width: 6.5px;
+  height: 6.5px;
+  background-position: -138px 0px;
+  display: block;
+  vertical-align: middle;
+  position: relative;
+  top: -0.5px;
+}
+.sidebar .nav a, .sidebar .nav .sb-admin li {
+  border-radius: 0;
+  color: #202020;
+  font-size: 15px;
+}
+.sidebar .nav a:hover, .sidebar .nav a:focus, .sidebar .nav .sb-admin li:hover, .sidebar .nav .sb-admin li:focus {
+  background-color: transparent;
+}
+.sidebar .nav a:hover:before, .sidebar .nav a.active:before, .sidebar .nav .sb-admin li:hover:before, .sidebar .nav .sb-admin li.active:before {
+  background-color: #2d76fc;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3px;
+}
+.sidebar .nav a.selected, .sidebar .nav .sb-admin li.selected {
+  background-color: #2d76fc;
+  color: #fff;
+}
+.sidebar .nav .sb-admin ul > li a {
+  display: block;
+}
+.sidebar .nav .sb-admin li:hover,
+.sidebar .nav .sb-admin li.active {
+  background: #f2f2f2;
+  cursor: pointer;
+}
+.sidebar .nav .sb-menu-abbr {
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  text-align: center;
+  width: 25px;
+}
+.sidebar .nav .inner-list {
+  display: none;
+}
+
+.sidebar .inner-list {
+  max-height: 260px;
+  overflow: auto;
+  position: relative;
+}
+.sidebar .inner-list li {
+  display: flex;
+  padding: 10px 15px;
+}
+.sidebar .inner-list li p {
+  font-size: 13px;
+}
+.sidebar .inner-list li p .icon {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.sidebar .inner-list .checkbox-grp label:before {
+  top: 12px;
+}
+
+.sidebar .sb-smart-grp .checkbox-grp {
+  margin-right: 15px;
+}
+.sidebar .sb-smart-grp .checkbox-grp label:before {
+  right: 10px;
+}
+
+.search-grp {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+.search-grp input {
+  border: 0 none;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: "aileronlight";
+  font-size: 13px;
+  height: 40px;
+  outline: none;
+}
+.search-grp input:focus {
+  box-shadow: none;
+}
+.search-grp .input-group-addon {
+  background-color: transparent;
+  border: 0 none;
+  font-size: 20px;
+  padding-right: 0;
+  position: relative;
+  color: #aaa;
+}
+
+#main_sidebar > li > a {
+  position: relative;
+  padding: 9px 10px;
+}
+#main_sidebar > li > a:after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  position: absolute;
+  top: 15.5px;
+  right: 13px;
+  transform: rotate(-48deg);
+}
+#main_sidebar > li > a.active:after {
+  border-color: #fff;
+  transform: rotate(136deg);
+  top: 18px;
+}
+
+.sb-smart-grp .inner-list li p {
+  -webkit-flex: 2 0 0;
+  flex: 2 0 0;
+}
+.sb-smart-grp .inner-list li p a {
+  display: block;
+}
+.sb-smart-grp .inner-list .checkbox-grp label {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.sb-admin .inner-list li {
+  height: 45px;
+  padding: 13px 0;
+}
+.sb-admin .inner-list li a {
+  width: 100%;
+  -ms-box-orient: horizontal;
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -moz-flex !important;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 15px;
+}
+.sb-admin .inner-list .checkbox-grp label {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+/*-------------------------------end of Sidebar-------------------------------*/
+
+/*# sourceMappingURL=sidebar.css.map */
