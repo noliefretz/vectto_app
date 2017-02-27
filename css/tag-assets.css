@@ -3,7 +3,7 @@
   /*container styles*/
 }
 #tagAssets .stepHolder {
-  margin-top: 15px;
+  margin-top: 7px;
 }
 #tagAssets .vectto-tag-asset label {
   position: relative;
@@ -15,8 +15,8 @@
 #tagAssets #tagAssetsCon .assets-parent .checkbox {
   display: inline-block;
   position: absolute;
-  top: 7px;
-  left: 10px;
+  top: 8px;
+  left: 12px;
   margin: 0;
 }
 #tagAssets #tagAssetsCon .assets-parent .checkbox > input[type="checkbox"] {
@@ -29,11 +29,13 @@
   height: 0;
 }
 #tagAssets #tagAssetsCon .assets-parent .checkbox > label {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border: 1px solid #cdcdcd;
   border-radius: 50%;
   background: #fff;
+  min-height: auto;
+  padding: 0;
 }
 #tagAssets #tagAssetsCon .assets-parent .vectto-tag {
   width: auto;
@@ -51,17 +53,19 @@
 }
 #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .checkbox {
   margin: 0;
-  margin-left: 10px;
   overflow: hidden;
   position: relative;
-  top: 5px;
+  top: 4px;
+  left: 12px;
 }
 #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .checkbox > label {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border: 1px solid #cdcdcd;
   border-radius: 50%;
   background: #fff;
+  padding: 0;
+  min-height: auto;
 }
 #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .indicator-count {
   width: 16px;
@@ -79,21 +83,26 @@
 }
 #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .left .left-wrap {
   display: inline-block;
-  width: 215px;
+  width: 212px;
 }
 #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .left .left-wrap > div {
   float: left;
-  line-height: 48px;
+  line-height: 45px;
+}
+#tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .left .numCount {
+  padding: 0 0 0 20px;
 }
 #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .left .filename {
-  max-width: 117px;
+  max-width: 107px;
+  padding-left: 10px;
 }
 #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .right {
-  line-height: 48px;
+  line-height: 45px;
 }
 #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .right .preview {
   max-width: 30px;
   width: 100%;
+  margin-right: 6px;
 }
 #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .right .preview img {
   width: 100%;
@@ -112,7 +121,8 @@
   margin-left: 8px;
 }
 #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .link-section .link-icon:hover, #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .link-section .link-icon.active {
-  background-position: -23.5px -78.5px;
+  background-position: -23.5px -79.5px;
+  cursor: pointer;
 }
 #tagAssets #tagAssetsCon .tag-assets-con .file-item-con .file-item .tag-section {
   position: relative;

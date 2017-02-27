@@ -4,7 +4,7 @@
 #tagAssets{
     
     .stepHolder{
-        margin-top: 15px;
+        margin-top: 7px;
     }
     
     .vectto-tag-asset{
@@ -20,8 +20,8 @@
             .checkbox{
                 display: inline-block;
                 position: absolute;
-                top: 7px;
-                left: 10px;
+                top: 8px;
+                left: 12px;
                 margin: 0;
                 > input[type="checkbox"]{
                     position: absolute;
@@ -33,11 +33,13 @@
                     height: 0;
                 }
                 > label{
-                    width: 14px;
-                    height: 14px;
+                    width: 16px;
+                    height: 16px;
                     border: 1px solid #cdcdcd;
                     border-radius: 50%;
-                    background: #fff;  
+                    background: #fff;
+                    min-height: auto;
+                    padding: 0;
                 }
             }
             .vectto-tag{
@@ -54,16 +56,18 @@
                     height: 50px;
                     .checkbox{
                         margin: 0;
-                        margin-left: 10px;
                         overflow: hidden;
                         position: relative;
-                        top: 5px;
+                        top: 4px;
+                        left: 12px;
                         > label{
-                            width: 14px;
-                            height: 14px;
+                            width: 16px;
+                            height: 16px;
                             border: 1px solid #cdcdcd;
                             border-radius: 50%;
-                            background: #fff;  
+                            background: #fff; 
+                            padding: 0;
+                            min-height: auto;
                         }
                     }
                     .indicator-count{
@@ -83,21 +87,26 @@
                     .left{
                         .left-wrap{
                             display: inline-block;
-                            width: 215px;
+                            width: 212px;
                             > div{
                                 float: left;
-                                line-height: 48px;
+                                line-height: 45px;
                             }
                         }
+                        .numCount{
+                            padding: 0 0 0 20px;
+                        }
                         .filename{
-                            max-width: 117px;
+                            max-width: 107px;
+                            padding-left: 10px;
                         }
                     }
                     .right{
-                        line-height: 48px;
+                        line-height: 45px;
                         .preview{
                             max-width: 30px;
                             width: 100%;
+                            margin-right: 6px;
                             img{
                                 width: 100%;
                                 max-width: 100%;
@@ -117,7 +126,8 @@
                             height: 6px;
                             margin-left: 8px;
                             &:hover, &.active{
-                                background-position: -23.5px -78.5px;
+                                background-position: -23.5px -79.5px;
+                                cursor: pointer;
                             }
                         }
                     }

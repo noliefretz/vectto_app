@@ -864,7 +864,7 @@ html, body {
 }
 #content-holder #conHeader .continueBtn button,
 #content-holder #conHeader .continueBtn a {
-  /*width: 103px;*/
+  min-width: 103px;
   height: 40px;
   font-size: 12px;
   font-family: "aileronbold";

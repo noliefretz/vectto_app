@@ -4,6 +4,7 @@ var faux = ['.net','accounting','acting','adobe creative suite','advertising','a
 
 var example4 = new Taggle($('.tag-section-form')[0], {
     //additionalTagClasses: 'new-taggle',
+    placeholder: 'add tag...',
     onTagAdd: function(event, tag){
         console.log(event);
     }

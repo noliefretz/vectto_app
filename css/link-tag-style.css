@@ -1,0 +1,131 @@
+/* transition mixin */
+.link-section {
+  position: relative;
+}
+
+.instance-tooltip {
+  position: absolute;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.85);
+  top: 40px;
+  left: -8px;
+}
+.instance-tooltip:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.85);
+  position: absolute;
+  left: 15px;
+  top: -10px;
+}
+.instance-tooltip .style-holder {
+  position: relative;
+}
+.instance-tooltip .style-holder ul {
+  padding: 0 10px 0 30px;
+  list-style: none;
+  margin: 0;
+  line-height: 30px;
+}
+.instance-tooltip .style-holder ul li {
+  font-size: 12px;
+  color: #fff;
+  clear: both;
+  overflow: hidden;
+}
+.instance-tooltip .style-holder ul li .style-text,
+.instance-tooltip .style-holder ul li .style-icon-count {
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+.instance-tooltip .style-holder ul li .style-icon-count {
+  text-align: right;
+  color: #aaaaaa;
+}
+.instance-tooltip .style-holder .prev {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  z-index: 1;
+}
+.instance-tooltip .style-holder .prev a {
+  display: inline-block;
+  position: relative;
+}
+.instance-tooltip .style-holder .prev a:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(44deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.instance-tooltip .style-holder .next {
+  position: absolute;
+  top: -15px;
+  left: 80px;
+  z-index: 1;
+}
+.instance-tooltip .style-holder .next a {
+  display: inline-block;
+  position: relative;
+}
+.instance-tooltip .style-holder .next a:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.instance-tooltip .instance-tooltip-con {
+  height: 200px;
+  overflow-y: auto;
+}
+.instance-tooltip .instance-tooltip-con .instance-pane form {
+  width: 100%;
+  line-height: normal;
+}
+.instance-tooltip .instance-tooltip-con .instance-pane form input[type="search"] {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  font-size: 12px;
+  color: #fff;
+  padding: 0 10px;
+  height: 30px;
+}
+.instance-tooltip .instance-tooltip-con .instance-pane .instance-search-result {
+  padding: 10px 0;
+}
+.instance-tooltip .instance-tooltip-con .instance-pane .instance-search-result .row {
+  margin: 0;
+}
+.instance-tooltip .instance-tooltip-con .instance-pane .instance-search-result .row > div {
+  padding: 0;
+}
+.instance-tooltip .instance-tooltip-con .instance-pane .instance-search-result .row .icon-thumb {
+  width: 34px;
+  margin: 0 auto 15px auto;
+  padding: 5px;
+  border: 1px solid transparent;
+}
+.instance-tooltip .instance-tooltip-con .instance-pane .instance-search-result .row .icon-thumb img {
+  width: 22px;
+  height: auto;
+}
+.instance-tooltip .instance-tooltip-con .instance-pane .instance-search-result .row .icon-thumb:hover {
+  border-color: #ccc;
+}
+
+/*# sourceMappingURL=link-tag-style.css.map */
