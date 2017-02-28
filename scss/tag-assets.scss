@@ -17,6 +17,17 @@
         .assets-parent{
             padding-left: 45px;
             position: relative;
+            > li{
+                float: left;
+                .editinplace{
+                    position: relative;
+                    top: 7px;
+                }
+                .forTags{
+                    position: relative;
+                    top: 7px;
+                }
+            }
             .checkbox{
                 display: inline-block;
                 position: absolute;
@@ -31,6 +42,25 @@
                     opacity: 0;
                     width: 0;
                     height: 0;
+                    &:checked{
+                        ~ label{
+                            border-color: #202020;
+                            visibility: visible !important;
+                            opacity: 1 !important;
+                            &:before{
+                                content: "";
+                                width: 4px;
+                                height: 8px;
+                                border-bottom: 2px solid #202020;
+                                border-right: 2px solid #202020;
+                                position: absolute;
+                                top: 3px;
+                                left: 6px;
+                                z-index: 1;
+                                transform: rotate(40deg);
+                            }
+                        }
+                    }
                 }
                 > label{
                     width: 16px;
@@ -68,6 +98,45 @@
                             background: #fff; 
                             padding: 0;
                             min-height: auto;
+                            position: relative;
+                            visibility: hidden;
+                            opacity: 0;
+                        }
+                        > input[type="checkbox"]{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 0;
+                            height: 0;
+                            visibility: hidden;
+                            opacity: 0;
+                            &:checked{
+                                ~ label{
+                                    border-color: #202020;
+                                    visibility: visible !important;
+                                    opacity: 1 !important;
+                                    &:before{
+                                        content: "";
+                                        width: 4px;
+                                        height: 8px;
+                                        border-bottom: 2px solid #202020;
+                                        border-right: 2px solid #202020;
+                                        position: absolute;
+                                        top: 3px;
+                                        left: 5px;
+                                        z-index: 1;
+                                        transform: rotate(40deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        .checkbox{
+                            > label{
+                                visibility: visible;
+                                opacity: 1;
+                            }
                         }
                     }
                     .indicator-count{
